@@ -21,6 +21,210 @@ theme:
   locale: es
 nav:
   - Inicio: 'index.md'
+  - 'Nivel 1: Fundamentos Económicos y Contables':
+      - 'Semana 1: Principios básicos, oferta, demanda y equilibrio de mercado':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_01/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_01/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_01/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_01/session_04.md'
+      - 'Semana 2: Teoría del consumidor, elasticidades y comportamiento del consumidor':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_02/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_02/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_02/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_02/session_04.md'
+      - 'Semana 3: Teoría de la firma, costos de producción y estructuras de mercado':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_03/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_03/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_03/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_03/session_04.md'
+      - 'Semana 4: Medición de la economía: PIB, inflación, desempleo e índices de precios':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_04/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_04/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_04/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_04/session_04.md'
+      - 'Semana 5: Modelo de Demanda y Oferta Agregada (DA-OA) y el multiplicador keynesiano':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_05/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_05/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_05/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_05/session_04.md'
+      - 'Semana 6: Política monetaria y política fiscal':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_06/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_06/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_06/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_06/session_04.md'
+      - 'Semana 7: Ecuación contable básica, registro de transacciones y el ciclo contable':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_07/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_07/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_07/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_07/session_04.md'
+      - 'Semana 8: Estado de Resultados y Estado de Situación Financiera (Balance General)':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_08/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_08/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_08/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_08/session_04.md'
+      - 'Semana 9: Estado de Flujos de Efectivo y Estado de Cambios en el Patrimonio':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_09/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_09/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_09/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_09/session_04.md'
+      - 'Semana 10: Repaso integrador: macroeconomía y análisis financiero introductorio':
+          - 'Sesión 1: Fundamentos': 'nivel_01/semana_10/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_01/semana_10/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_01/semana_10/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_01/semana_10/session_04.md'
+  - 'Nivel 2: Herramientas Cuantitativas y Modelación':
+      - 'Semana 11: Valor del dinero en el tiempo, interés simple vs. interés compuesto':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_11/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_11/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_11/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_11/session_04.md'
+      - 'Semana 12: Tasa nominal, efectiva, equivalencia de tasas e inflación':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_12/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_12/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_12/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_12/session_04.md'
+      - 'Semana 13: Series de pagos (anualidades, perpetuidades) y sistemas de amortización':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_13/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_13/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_13/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_13/session_04.md'
+      - 'Semana 14: Estadística descriptiva, medidas de tendencia central y dispersión':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_14/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_14/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_14/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_14/session_04.md'
+      - 'Semana 15: Probabilidades y distribuciones de probabilidad en finanzas':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_15/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_15/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_15/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_15/session_04.md'
+      - 'Semana 16: Inferencia estadística, pruebas de hipótesis y regresión lineal':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_16/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_16/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_16/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_16/session_04.md'
+      - 'Semana 17: Excel intermedio-avanzado: funciones financieras (VNA, TIR, PAGO, XBUSCAR)':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_17/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_17/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_17/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_17/session_04.md'
+      - 'Semana 18: Modelación de estados financieros proyectados en Excel':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_18/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_18/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_18/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_18/session_04.md'
+      - 'Semana 19: Validación de datos, tablas dinámicas, control de errores y escenarios':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_19/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_19/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_19/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_19/session_04.md'
+      - 'Semana 20: Análisis de sensibilidad y modelación Monte Carlo básica':
+          - 'Sesión 1: Fundamentos': 'nivel_02/semana_20/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_02/semana_20/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_02/semana_20/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_02/semana_20/session_04.md'
+  - 'Nivel 3: Finanzas Corporativas y Mercados':
+      - 'Semana 21: Análisis de ratios financieros (liquidez, solvencia, rentabilidad, eficiencia)':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_21/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_21/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_21/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_21/session_04.md'
+      - 'Semana 22: Análisis Dupont, flujo de caja libre (FCF) y EBITDA':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_22/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_22/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_22/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_22/session_04.md'
+      - 'Semana 23: Gestión del capital de trabajo y análisis de quiebra (Altman Z-Score)':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_23/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_23/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_23/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_23/session_04.md'
+      - 'Semana 24: Costo de capital (WACC), costo de deuda y costo del patrimonio (CAPM)':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_24/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_24/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_24/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_24/session_04.md'
+      - 'Semana 25: Presupuesto de capital: VAN, TIR y Payback descontado':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_25/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_25/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_25/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_25/session_04.md'
+      - 'Semana 26: Estructura de capital óptima (Modigliani-Miller) y política de dividendos':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_26/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_26/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_26/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_26/session_04.md'
+      - 'Semana 27: Fusiones, adquisiciones (M&A) y valoración de startups':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_27/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_27/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_27/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_27/session_04.md'
+      - 'Semana 28: Estructura del sistema financiero: renta variable, renta fija y Forex':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_28/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_28/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_28/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_28/session_04.md'
+      - 'Semana 29: Funcionamiento de las bolsas de valores y formación de precios':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_29/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_29/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_29/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_29/session_04.md'
+      - 'Semana 30: Introducción a los derivados: forwards, futuros, opciones y swaps':
+          - 'Sesión 1: Fundamentos': 'nivel_03/semana_30/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_03/semana_30/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_03/semana_30/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_03/semana_30/session_04.md'
+  - 'Nivel 4: Gestión de Riesgo, Banca y Especialización':
+      - 'Semana 31: Identificación y medición de riesgos: mercado, crédito y operativo':
+          - 'Sesión 1: Fundamentos': 'nivel_04/semana_31/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_04/semana_31/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_04/semana_31/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_04/semana_31/session_04.md'
+      - 'Semana 32: Gestión del riesgo en Excel: VaR, CVaR y cobertura (Hedging)':
+          - 'Sesión 1: Fundamentos': 'nivel_04/semana_32/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_04/semana_32/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_04/semana_32/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_04/semana_32/session_04.md'
+      - 'Semana 33: Banca comercial vs. banca de inversión y multiplicador bancario':
+          - 'Sesión 1: Fundamentos': 'nivel_04/semana_33/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_04/semana_33/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_04/semana_33/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_04/semana_33/session_04.md'
+      - 'Semana 34: Regulación bancaria: Basilea, ratios de liquidez y stress testing':
+          - 'Sesión 1: Fundamentos': 'nivel_04/semana_34/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_04/semana_34/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_04/semana_34/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_04/semana_34/session_04.md'
+      - 'Semana 35: Impuestos corporativos, IVA/IGV y su impacto en los flujos de caja':
+          - 'Sesión 1: Fundamentos': 'nivel_04/semana_35/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_04/semana_35/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_04/semana_35/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_04/semana_35/session_04.md'
+      - 'Semana 36: Planeación tributaria, impuestos diferidos y fiscalidad internacional':
+          - 'Sesión 1: Fundamentos': 'nivel_04/semana_36/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_04/semana_36/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_04/semana_36/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_04/semana_36/session_04.md'
+      - 'Semana 37: Valuación por Descuento de Flujos de Caja (DCF) y Valor Terminal':
+          - 'Sesión 1: Fundamentos': 'nivel_04/semana_37/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_04/semana_37/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_04/semana_37/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_04/semana_37/session_04.md'
+      - 'Semana 38: Valuación relativa: múltiplos de mercado y transacciones comparables':
+          - 'Sesión 1: Fundamentos': 'nivel_04/semana_38/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_04/semana_38/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_04/semana_38/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_04/semana_38/session_04.md'
+      - 'Semana 39: Teoría de portafolios, asset allocation y gestión de fondos':
+          - 'Sesión 1: Fundamentos': 'nivel_04/semana_39/session_01.md'
+          - 'Sesión 2: Profundización': 'nivel_04/semana_39/session_02.md'
+          - 'Sesión 3: Aplicación Práctica': 'nivel_04/semana_39/session_03.md'
+          - 'Sesión 4: Caso de Estudio y Evaluación': 'nivel_04/semana_39/session_04.md'
+      - 'Semana 40: Proyecto Final: reporte de inversión integral':
+          - 'Sesión 1: Planteamiento del Proyecto': 'nivel_04/semana_40/session_01.md'
+          - 'Sesión 2: Estructura del Reporte': 'nivel_04/semana_40/session_02.md'
+          - 'Sesión 3: Entregables y Caso de Referencia': 'nivel_04/semana_40/session_03.md'
+          - 'Sesión 4: Evaluación y Cierre': 'nivel_04/semana_40/session_04.md'
 plugins:
   - search
   - mermaid2
