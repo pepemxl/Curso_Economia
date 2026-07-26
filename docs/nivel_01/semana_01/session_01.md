@@ -30,6 +30,7 @@ Traducción literal: "Ceteris" significa el resto u otras cosas, y "paribus" sig
 * **La Ley de la Demanda:** Existe una relación *inversa* entre el precio y la cantidad demandada. Si el precio sube, la cantidad demandada baja; si el precio baja, la cantidad demandada sube.
 
 **Determinantes de la Demanda (Factores que desplazan la curva):**
+
 1. **Ingreso del consumidor:** Si el ingreso sube, la demanda de bienes normales sube (se desplaza a la derecha).
 2. **Precios de bienes relacionados:**
    * *Sustitutos:* Si sube el precio del café, la demanda del té aumenta.
@@ -47,6 +48,7 @@ La **oferta** es la cantidad de un bien o servicio que los productores están di
 * **La Ley de la Oferta:** Existe una relación *directa* entre el precio y la cantidad ofrecida. Si el precio sube, la cantidad ofrecida sube (porque es más rentable producirlo).
 
 **Determinantes de la Oferta (Factores que desplazan la curva):**
+
 1. **Precios de los insumos (Costos de producción):** Si sube el precio del petróleo (insumo energético), el costo de producir plásticos sube y la oferta de plásticos baja.
 2. **Tecnología:** Mejoras tecnológicas aumentan la productividad, bajan costos y aumentan la oferta.
 3. **Expectativas:** Si los agricultores esperan que el precio del trigo suba el próximo mes, reducirán su oferta hoy para venderla más cara mañana.
