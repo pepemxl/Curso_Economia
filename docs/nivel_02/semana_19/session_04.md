@@ -1,0 +1,35 @@
+# Semana 19 · Sesión 4: Caso de Estudio y Evaluación
+
+## 7. Análisis de Caso: El "Stress Test" que salvó al banco
+*Eres parte del equipo de Originación de un fondo de Private Equity. Quieren comprar una cadena de cines. El modelo Base muestra que genera Flujo de Caja Libre de $10M al año, suficiente para pagar la deuda del LBO ( compra apalancada).*
+
+El Comité de Inversión te pide un *Stress Test* (prueba de estrés). Construyes un modelo con escenarios dinámicos:
+* **Escenario Pesimista:** Modelas que la asistencia de público cae un 20%, el costo de las palomitas de maíz sube un 15% (inflación) y el banco sube la tasa de interés de la deuda del 5% al 9%.
+
+Al accionar tu SWITCH de "ELEGIR 3", las Tablas Dinámicas muestran que, en el Escenario Pesimista, el Flujo de Caja Libre cae a $0M (cero). Peor aún, la empresa quema $2M en efectivo porque no puede subir los precios de los boletos por la competencia del streaming. La deuda se vuelve impagable.
+
+**El Veredicto:** El comité no rechaza la compra, pero rechaza la **estructura de capital**. Gracias a la modelación de escenarios, decides no financiar la compra con un 80% de deuda, sino con un 50%. El modelo pesimista ahora muestra que la empresa puede sobrevivir a una recesión sin ir a quiebra.
+
+---
+
+## 8. Tareas y Evaluación de la Semana 19
+
+**A. Lectura y Práctica Obligatoria:**
+* *Lectura*: "Investment Banking: Valuation, Leveraged Buyouts, and Mergers and Acquisitions" (Rosenbaum & Pearl) - Capítulo sobre cómo construir escenarios operativos.
+* *Práctica Youtube*: Busca "Excel CHOOSE function scenario analysis" y "Excel Pivot Tables for accounting".
+
+**B. Preguntas de Reflexión:**
+1. ¿Por qué un analista financiero debe agregar la función `SI.ERROR` (IFERROR) a su modelo al dividir cuentas contables como "Cuentas por Cobrar" entre "Ventas" para calcular los días de cobro?
+2. Imagina que te entregan un Excel con 4 años de datos diarios de la bolsa (100,000 filas). ¿Cuál es la forma más eficiente de saber el rendimiento promedio mensil sin usar fórmulas complejas?
+
+**C. Ejercicio Práctico de Excel a entregar:**
+Crea en un Excel limpio el siguiente "Dashboard de Escenarios":
+
+* Imagina 3 tasas de inflación proyectadas (En una tabla): Base 3%, Optimista 1%, Pesimista 8%.
+* En la celda A1, usa Validación de Datos para crear una lista desplegable que solo permita elegir los números 1, 2 o 3.
+* En la celda B1, usa la función `ELEGIR` (CHOOSE) para que, dependiendo del número en A1, jale automáticamente la tasa correspondiente (3%, 1% u 8%).
+* En la celda C1, escribe una fórmula financiera que calcule el Valor Futuro de $1,000 invertidos a 1 año usando la tasa de B1: `=1000 * (1 + B1)`.
+* Agrega un `SI.ERROR` a C1 que proteja la fórmula en caso de que alguien borre B1 por accidente.
+
+---
+*¡Felicidades por completar la Semana 19! Tu modelo ahora respira y reacciona a las crisis. En la Semana 20 cerraremos el Nivel 2 con broche de oro: Análisis de sensibilidad y Simulación Monte Carlo básica para medir el riesgo de pérdida.*
