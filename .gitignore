@@ -1,2 +1,24 @@
+# Entornos virtuales
+venv/
+.venv/
+
+# Build de la documentacion
+site/
 /PLAN/site/
+
+# Notas y borradores locales (no versionados)
 /PLAN/
+LOCAL_DATA/
+
+# Cache de Python y herramientas
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
