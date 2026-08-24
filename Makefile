@@ -16,6 +16,7 @@ REPORTS_DIR = reports
 
 .PHONY: all build up down restart clean shell composer-install composer-update logs
 .PHONY: build_docs up_docs down_docs restart_docs clean_docs
+.PHONY: docs_build docs_serve docs_deps figures figures_deps plantillas help
 
 
 # Default target
@@ -84,6 +85,48 @@ clean_docs:
 # Atajo para build + run
 up_docs: build_docs run_docs
 
+############# Docs: calidad y build local (sin Docker) ############
+DOCS_REQS := ./src/containers/docs/requirements.txt
+
+# Instala las dependencias fijadas de la documentacion
+docs_deps:
+	$(PY) -m pip install -r $(DOCS_REQS)
+
+# Instala lo necesario para regenerar las figuras
+figures_deps:
+	$(PY) -m pip install -r ./src/requirements-figures.txt
+
+# Build estricto: cualquier warning (enlace roto, clave invalida) falla el build.
+# Es el mismo comando que corre la CI.
+docs_build:
+	mkdocs build --strict
+
+# Servidor local con live-reload, sin necesidad de Docker
+docs_serve:
+	mkdocs serve -a 127.0.0.1:$(PORT_DOCS)
+
+# Regenera todas las figuras del curso en docs/images/
+# Usa el python del venv, que es donde vive matplotlib
+FIG_PY := $(if $(wildcard $(VENV)/bin/python),$(VENV)/bin/python,$(PY))
+figures:
+	@for f in $$(find src -name "fig_*.py" | sort); do \
+		echo "$$f"; $(FIG_PY) $$f || exit 1; \
+	done
+
+# Regenera las plantillas .xlsx y verifica que reproducen los ejercicios
+plantillas:
+	@for f in $$(find src -name "xls_*.py" | sort); do \
+		echo "$$f"; $(FIG_PY) $$f || exit 1; \
+	done
+	@echo "--- verificando formulas ---"
+	@$(FIG_PY) src/verificar_plantillas.py
+
+# Lista los targets disponibles
+help:
+	@grep -hE '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
+		| awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-18s\033[0m %s\n", $$1, $$2}'
+
+
 ################# LOCAL  ENVIRONMENT ############################
 
 .PHONY: local_env
@@ -106,4 +149,4 @@ clean_local_env: ${VENV}
 .PHONY: clean_local_env_cache
 clean_local_env_cache: ${VENV}
 	find . -type f -name *.pyc -delete
-	ind . -type d -name __pycache__ -delete
+	find . -type d -name __pycache__ -delete
