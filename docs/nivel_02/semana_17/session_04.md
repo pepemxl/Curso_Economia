@@ -36,5 +36,87 @@ Crea una hoja de Excel con un modelo de evaluación de un proyecto inmobiliario.
 2. **Función VNA:** Escribe la estructura exacta de la fórmula en Excel para calcular el Valor Presente Neto de este proyecto (recuerda la trampa del Año 0). Calcula manualmente si el proyecto es viable o no.
 3. **Función TIR:** Escribe la fórmula para calcular la rentabilidad porcentual del proyecto. (Pista: para TIR incluyes TODOS los flujos, incluido el terreno).
 
+
+??? success "Solución del Ejercicio C"
+
+    Supongamos los flujos capturados en las celdas `B2:B5` (Año 0 a Año 3) y la tasa
+    del 12 % en `B7`.
+
+    | Celda | Año | Flujo |
+    |---|---|---|
+    | B2 | 0 | −2,000,000 |
+    | B3 | 1 | −3,000,000 |
+    | B4 | 2 | +3,500,000 |
+    | B5 | 3 | +3,800,000 |
+
+    **1. Función PAGO — préstamo puente**
+
+    ```excel
+    =PAGO(15%; 3; 3000000)
+    ```
+
+    Resultado: **−$1,313,930.89** anuales.
+
+    El signo negativo es correcto y deliberado: Excel aplica la convención de signos
+    de flujo de caja. Recibes $+3{,}000{,}000$ hoy, así que los pagos futuros salen
+    con signo contrario. Si quieres verlo positivo:
+    `=-PAGO(15%; 3; 3000000)`.
+
+    Total pagado: $1{,}313{,}930.89 \times 3 = \$3{,}941{,}792.67$, de los cuales
+    **$\$941{,}792.67$ son intereses**.
+
+    **2. Función VNA — y la trampa del Año 0**
+
+    ```excel
+    =VNA(B7; B3:B5) + B2
+    ```
+
+    !!! danger "La trampa que arruina más modelos"
+        `VNA` en Excel **descuenta el primer flujo del rango un período**, porque
+        asume que ocurre al final del año 1. El desembolso del Año 0 ocurre **hoy** y
+        no debe descontarse.
+
+        Por eso `B2` se **suma por fuera** del rango. Si escribieras
+        `=VNA(B7; B2:B5)` estarías descontando el terreno un año de más, y el VAN
+        saldría subestimado en $\approx \$214{,}286$.
+
+    *Cálculo manual:*
+
+    $$VAN = -2{,}000{,}000 + \frac{-3{,}000{,}000}{1.12} + \frac{3{,}500{,}000}{1.12^2} + \frac{3{,}800{,}000}{1.12^3}$$
+
+    | Año | Flujo | Factor | Valor Presente |
+    |---|---|---|---|
+    | 0 | −2,000,000 | 1.0000 | −2,000,000.00 |
+    | 1 | −3,000,000 | 0.8929 | −2,678,571.43 |
+    | 2 | +3,500,000 | 0.7972 | +2,790,178.57 |
+    | 3 | +3,800,000 | 0.7118 | +2,704,765.94 |
+    | | | **VAN** | **+816,372.08** |
+
+    **El proyecto es viable: VAN = +$816,372.08 > 0.** Genera $\$816{,}372$ de valor
+    por encima del 12 % exigido.
+
+    **3. Función TIR**
+
+    ```excel
+    =TIR(B2:B5)
+    ```
+
+    Resultado: **21.79 %**.
+
+    Aquí **sí** se incluye el Año 0 en el rango — a diferencia de `VNA`. `TIR` espera
+    la serie completa de flujos porque busca la tasa que hace $VAN = 0$.
+
+    **Decisión:** $TIR = 21.79\% > 12\%$ del costo de capital → **aceptar el
+    proyecto**. Coherente con el VAN positivo, como debe ser en un proyecto de flujos
+    convencionales.
+
+    !!! tip "Cuándo TIR y VAN se contradicen"
+        Este proyecto tiene **dos cambios de signo** ($-,-,+,+$), así que la TIR es
+        única y confiable. Con flujos no convencionales (por ejemplo, un desmantelamiento
+        costoso al final: $-,+,+,-$) pueden existir **múltiples TIR** o ninguna.
+        En esos casos usa `TIRM` (TIR modificada) o quédate solo con el VAN, que
+        nunca falla. Y si los flujos son irregulares en el tiempo, `VNA.NO.PER` y
+        `TIR.NO.PER` trabajan con fechas reales.
+
 ---
 *¡Felicidades por completar la Semana 17! Ya dominas la artillería pesada de Excel. En la Semana 18 subiremos la dificultad a nivel "Wall Street": Modelación de estados financieros proyectados (P&L, Balance, Flujo de Efectivo) desde cero en Excel.*

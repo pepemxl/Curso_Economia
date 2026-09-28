@@ -17,5 +17,20 @@ En "Celda de entrada de columna" seleccionas **una celda vacía y basura** (ej. 
 
 Al instante, tendrás 1,000 VNAs diferentes. Usas la función `=CONTAR.SI(rango_VNAs; ">0") / 1000` y obtienes la **probabilidad exacta de que el proyecto sea rentable**.
 
----
 
+## Plantilla de Excel
+
+!!! abstract "Descarga: VaR y simulación Monte Carlo"
+    **[:material-file-excel: var_montecarlo.xlsx](../../assets/plantillas/var_montecarlo.xlsx)**
+
+    La hoja **Monte Carlo** trae las 1.000 iteraciones ya construidas con
+    `INV.NORM(ALEATORIO();media;desviación)`, más los estadísticos (`PROMEDIO`, `CONTAR.SI`,
+    `PERCENTIL`) y el **valor teórico al que la simulación debe converger**, para que puedas
+    detectar si tu modelo tiene un error en lugar de mala suerte.
+
+    Pulsa ++f9++ para volver a sortear los 1.000 escenarios.
+
+    Con los datos del ejercicio: VAN esperado **$37.037,04**, $\sigma_{flujo}$ = **$304.138**
+    y probabilidad de éxito **55,2 %**.
+
+---

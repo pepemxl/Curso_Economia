@@ -28,3 +28,45 @@ Reemplaza a BUSCARV y es la estándar en modelos modernos (requiere Excel 365 o 
 
 ---
 
+## Las funciones de búsqueda: BUSCARV, ÍNDICE+COINCIDIR y BUSCARX
+
+Casi todo modelo financiero necesita traer datos de una tabla a otra. Tres generaciones de
+herramientas:
+
+**1. `BUSCARV` (VLOOKUP) — la clásica, con tres defectos graves**
+
+```excel
+=BUSCARV(valor_buscado; tabla; nº_columna; FALSO)
+```
+
+* Solo busca **hacia la derecha**: la clave debe estar en la primera columna.
+* El `nº_columna` es un número fijo: **si insertas una columna, la fórmula devuelve el dato
+  equivocado sin dar error**. Es el fallo silencioso más peligroso de Excel.
+* Es lenta en tablas grandes.
+
+**2. `ÍNDICE` + `COINCIDIR` — la solución robusta clásica**
+
+```excel
+=INDICE(columna_resultado; COINCIDIR(valor_buscado; columna_clave; 0))
+```
+
+Busca en cualquier dirección y **no se rompe al insertar columnas**, porque referencia rangos,
+no posiciones numéricas. Durante veinte años fue la marca de un modelador competente.
+
+**3. `BUSCARX` (XLOOKUP) — la moderna**
+
+```excel
+=BUSCARX(valor_buscado; rango_clave; rango_resultado; "no encontrado")
+```
+
+Combina las ventajas de ambas: busca en cualquier dirección, lleva el valor por defecto
+incorporado (no hace falta envolverla en `SI.ERROR`) y por defecto exige **coincidencia exacta**
+— al contrario que `BUSCARV`, cuyo cuarto argumento se olvida constantemente y devuelve
+coincidencias aproximadas erróneas.
+
+!!! tip "Si tu versión de Excel no tiene BUSCARX"
+    Usa `ÍNDICE`+`COINCIDIR`. **Evita `BUSCARV` en cualquier modelo que vaya a mantenerse en el
+    tiempo**: el riesgo de que alguien inserte una columna y rompa silenciosamente veinte
+    fórmulas es demasiado alto para el poco que ahorra.
+
+---

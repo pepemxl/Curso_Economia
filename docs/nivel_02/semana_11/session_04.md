@@ -29,5 +29,60 @@
 2. **Cálculo de Valor Presente:** Te ofrecen un pagaré que te pagará $50,000 dentro de 5 años. Si tu costo de oportunidad (tasa de descuento exigida) es del 6% anual, ¿Cuál es el Valor Presente de ese pagaré? ¿Cuánto deberías pagar hoy por él como máximo?
 3. **Comparación de Tasas:** El Banco A te ofrece un Certificado a Plazo al 12% capitalizable semestralmente ($m=2$). El Banco B te ofrece el 11.8% capitalizable mensualmente ($m=12$). ¿Cuál banco te da realmente la mejor Tasa Efectiva Anual (muestra tus cálculos)?
 
+
+??? success "Solución del Ejercicio C"
+
+    **1. Interés compuesto — $15,000 al 8 % durante 10 años**
+
+    $$VF = VP(1+i)^n = 15{,}000\,(1.08)^{10}$$
+
+    $$(1.08)^{10} = 2.158925$$
+
+    $$VF = 15{,}000 \times 2.158925 = \mathbf{\$32{,}383.87}$$
+
+    De ese total, $\$15{,}000$ es tu capital y **$\$17{,}383.87$ son intereses**: el
+    dinero más que se duplicó. Con interés *simple* solo habrías obtenido
+    $15{,}000 \times 0.08 \times 10 = \$12{,}000$ de intereses. La diferencia de
+    $\$5{,}383.87$ es, literalmente, el valor de los intereses sobre los intereses.
+
+    **2. Valor Presente del pagaré**
+
+    $$VP = \frac{VF}{(1+i)^n} = \frac{50{,}000}{(1.06)^5} = \frac{50{,}000}{1.338226}$$
+
+    $$VP = \mathbf{\$37{,}362.91}$$
+
+    **Máximo a pagar hoy: $\$37,362.91.** A ese precio exacto obtienes justo tu 6 %
+    exigido, ni más ni menos. Si te lo venden más barato, el rendimiento supera tu
+    costo de oportunidad (VAN positivo). Si te piden más, estarías aceptando un
+    rendimiento inferior al que puedes conseguir en otra parte.
+
+    **3. Comparación de tasas efectivas**
+
+    La tasa nominal **no es comparable** entre bancos con distinta frecuencia de
+    capitalización. Hay que llevar ambas a Tasa Efectiva Anual:
+
+    $$EAR = \left(1 + \frac{j}{m}\right)^{m} - 1$$
+
+    *Banco A — 12 % capitalizable semestralmente ($m=2$):*
+
+    $$EAR_A = \left(1 + \frac{0.12}{2}\right)^{2} - 1 = (1.06)^2 - 1 = \mathbf{12.36\%}$$
+
+    *Banco B — 11.8 % capitalizable mensualmente ($m=12$):*
+
+    $$EAR_B = \left(1 + \frac{0.118}{12}\right)^{12} - 1 = (1.0098333)^{12} - 1 = \mathbf{12.4596\%}$$
+
+    **Gana el Banco B**, por 0.10 puntos porcentuales.
+
+    !!! tip "La lección del ejercicio"
+        El Banco B ofrece una tasa **nominal más baja** (11.8 % contra 12 %) y aun así
+        paga **más**. La capitalización mensual reinvierte los intereses 12 veces al
+        año en lugar de 2, y esa frecuencia compensa con creces los 0.2 puntos de
+        desventaja nominal.
+
+        Por eso, ante dos productos financieros, **nunca compares tasas nominales**:
+        convierte todo a EAR. Es el mismo principio que protege al consumidor cuando
+        una tarjeta anuncia "3 % mensual" (que en realidad es 42.6 % efectivo anual,
+        como verás en la Semana 12).
+
 ---
-*¡Felicidades por completar la Semana 11! Ya dominas la base matemática de las finanzas. Comprender el interés compuesto y descontar valores cambiará para siempre cómo ves los préstamos y las inversiones. En la Semana 2 subiremos la complejidad: Tasas equivalentes, inflación y el manejo de Series de Pagos (Anualidades y Perpetuidades).*
+*¡Felicidades por completar la Semana 11! Ya dominas la base matemática de las finanzas. Comprender el interés compuesto y descontar valores cambiará para siempre cómo ves los préstamos y las inversiones. En la Semana 12 subiremos la complejidad: Tasas equivalentes, inflación y el manejo de Series de Pagos (Anualidades y Perpetuidades).*

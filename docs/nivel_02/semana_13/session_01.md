@@ -34,5 +34,9 @@ Una perpetuidad es una anualidad que **nunca termina**. Los pagos son iguales y 
 
 > **💥 Impacto Financiero (El Modelo de Gordon):** Las acciones comunes no tienen fecha de vencimiento. Si suponemos que una empresa pagará un dividendo constante para siempre, su precio teórico es el VP de una perpetuidad. Más adelante, en la Semana 37, usaremos la **Perpetuidad Creciente** ($VP = \frac{C_1}{i - g}$), que es el modelo estándar de Wall Street para hallar el "Valor Terminal" de una empresa en un DCF.
 
----
+<figure markdown="span">
+  ![Francés, Alemán y Americano: misma deuda, muy distinto perfil de caja y de intereses totales](../../images/sistemas_amortizacion.png)
+  <figcaption>Francés, Alemán y Americano: misma deuda, muy distinto perfil de caja y de intereses totales</figcaption>
+</figure>
 
+---

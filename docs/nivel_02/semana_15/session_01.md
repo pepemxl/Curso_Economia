@@ -25,5 +25,9 @@ Se usa cuando un experimento tiene **solo dos resultados posibles**: Éxito o Fr
 > $$ P(8) = \frac{10!}{8!2!} \times (0.9)^8 \times (0.1)^2 = 45 \times 0.4304 \times 0.01 = \mathbf{0.1937} \text{ (19.37\%)} $$
 > El banco knows que hay un 19% de probabilidad de perder dinero en 2 de esos 10 préstamos, y debe provisionar capital para soportar ese escenario exacto.
 
----
+<figure markdown="span">
+  ![Las tres distribuciones clave y sus aplicaciones financieras directas](../../images/distribuciones_probabilidad.png)
+  <figcaption>Las tres distribuciones clave y sus aplicaciones financieras directas</figcaption>
+</figure>
 
+---

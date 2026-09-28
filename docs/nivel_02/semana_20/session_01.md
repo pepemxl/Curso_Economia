@@ -34,5 +34,9 @@ Monte Carlo es una técnica matemática que **simula miles de escenarios posible
 4. Repites este proceso **1,000 o 10,000 veces**.
 5. Al final, puedes decir: *"De 10,000 simulaciones, el proyecto tuvo un VNA positivo en el 85% de los casos. Hay un 15% de probabilidad de pérdida"*.
 
----
+<figure markdown="span">
+  ![El VAN medio es positivo, pero el 45 % de los escenarios pierde dinero: lo que el análisis determinista oculta](../../images/montecarlo_van.png)
+  <figcaption>El VAN medio es positivo, pero el 45 % de los escenarios pierde dinero: lo que el análisis determinista oculta</figcaption>
+</figure>
 
+---

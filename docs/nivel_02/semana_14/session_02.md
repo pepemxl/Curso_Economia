@@ -24,3 +24,79 @@ No todos los datos se distribuyen de forma perfecta simétrica (como una campana
 
 ---
 
+## Asimetría y curtosis: por qué los retornos no son una campana
+
+La media y la desviación estándar describen bien una distribución **normal**. Los retornos
+financieros no lo son, y los dos momentos siguientes explican por qué.
+
+**Asimetría (*skewness*) — el tercer momento**
+
+| Tipo | Forma | Relación | Ejemplo financiero |
+|---|---|---|---|
+| **Positiva** | Cola larga a la derecha | Media > Mediana | Capital riesgo: muchas pérdidas pequeñas, pocos aciertos enormes |
+| **Simétrica** | Campana | Media = Mediana | El supuesto de los modelos |
+| **Negativa** | Cola larga a la izquierda | **Media < Mediana** | **Acciones**: subidas graduales, caídas abruptas |
+
+**Los retornos bursátiles tienen asimetría negativa**, y eso importa: significa que el
+"escenario típico" es mejor que el promedio, pero cuando va mal, va **muy** mal. Un inversionista
+que solo mire la media subestima la profundidad de las caídas.
+
+**Curtosis — el cuarto momento**
+
+Mide el grosor de las colas. La normal tiene curtosis 3 (*exceso* de curtosis = 0).
+
+| Curtosis | Nombre | Implicación |
+|---|---|---|
+| < 3 | Platicúrtica | Colas finas; eventos extremos aún más raros |
+| = 3 | Mesocúrtica | Normal |
+| **> 3** | **Leptocúrtica** | **Colas gordas**: los extremos ocurren mucho más de lo previsto |
+
+**Los retornos diarios de acciones tienen curtosis típica entre 5 y 10.** No es un detalle
+técnico: es la razón matemática de que los modelos basados en normalidad **subestimen
+sistemáticamente el riesgo de cola**, y de que Basilea III exija complementar el VaR con
+Expected Shortfall (Semana 32).
+
+Para dimensionarlo: bajo normalidad, una caída de 5 desviaciones estándar debería ocurrir una
+vez cada **7.000 años**. En los mercados reales ocurre cada pocos años.
+
+---
+
+## La covarianza y la correlación: la base de todo lo que viene
+
+Hasta ahora hemos medido el riesgo de **un** activo. La gestión de carteras necesita medir cómo
+se mueven **dos** activos juntos.
+
+**Covarianza:**
+
+$$Cov(X,Y) = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{n-1}$$
+
+El problema de la covarianza es que sus unidades son ininterpretables (%² ) y su magnitud
+depende de la escala. Por eso se normaliza:
+
+**Correlación:**
+
+$$\rho_{XY} = \frac{Cov(X,Y)}{\sigma_X \sigma_Y} \qquad -1 \le \rho \le +1$$
+
+| $\rho$ | Interpretación |
+|---|---|
+| $+1$ | Se mueven idénticamente |
+| $+0.7$ | Fuerte relación positiva |
+| $0$ | **Sin relación lineal** |
+| $-0.7$ | Fuerte relación inversa |
+| $-1$ | Espejos perfectos |
+
+!!! warning "Tres advertencias sobre la correlación"
+    1. **$\rho = 0$ no significa independencia.** Solo significa que no hay relación **lineal**.
+       Si $Y = X^2$, la correlación puede ser cero y sin embargo $Y$ está perfectamente
+       determinada por $X$.
+    2. **La correlación no es estable.** Se calcula sobre una ventana histórica y cambia con el
+       régimen de mercado. En las crisis, las correlaciones entre activos de riesgo convergen
+       hacia 1 justo cuando la diversificación haría falta.
+    3. **Correlación no es causalidad.** Es el error de la regresión espuria que verás en la
+       Semana 16, y cuesta dinero real en construcción de carteras.
+
+    La correlación es el ingrediente central de la frontera eficiente de Markowitz (Semana 39):
+    combinar activos con $\rho < 1$ reduce el riesgo de la cartera **sin sacrificar retorno
+    esperado**. Es lo más parecido a un almuerzo gratis que hay en finanzas.
+
+---

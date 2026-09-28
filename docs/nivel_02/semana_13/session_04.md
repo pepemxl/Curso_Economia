@@ -30,5 +30,58 @@ El banco te ofrece dos opciones de reestructuración de la deuda:
    * a) Calcula la cuota de amortización a capital fija que se pagará cada año.
    * b) Construye el cuadro de amortización de los 3 años (Saldo Inicial, Interés, Cuota Total, Saldo Final). Recuerda que en el Alemán, la cuota total varía, pero la amortización al capital es fija.
 
+
+??? success "Solución del Ejercicio C"
+
+    **1. Perpetuidad — acción preferente**
+
+    Una perpetuidad paga un flujo constante para siempre. Su valor presente es:
+
+    $$VP = \frac{D}{r} = \frac{8}{0.10} = \mathbf{\$80}$$
+
+    El precio teórico de la acción preferente es **$\$80**.
+
+    Conviene entender por qué una serie infinita da un número finito: el flujo del
+    año 50 descontado al 10 % vale $8/(1.10)^{50} = \$0.068$, y el del año 100 vale
+    prácticamente cero. La serie **converge**.
+
+    *Sensibilidad al rendimiento exigido:* si los inversionistas pasaran a exigir
+    12 % (por ejemplo, porque el banco central subió tasas), el precio caería a
+    $8/0.12 = \$66.67$, un **−16.7 %**, sin que el dividendo cambiara ni un centavo.
+    Es la mecánica de por qué la renta fija pierde valor cuando suben las tasas.
+
+    **2. Sistema Alemán — préstamo de $3,000 al 10 % en 3 años**
+
+    *a) Amortización a capital fija:*
+
+    $$A = \frac{\text{Capital}}{n} = \frac{3{,}000}{3} = \mathbf{\$1{,}000 \text{ por año}}$$
+
+    *b) Cuadro de amortización:*
+
+    | Año | Saldo Inicial | Interés (10 %) | Amortización | Cuota Total | Saldo Final |
+    |---|---|---|---|---|---|
+    | 1 | 3,000 | 300 | 1,000 | **1,300** | 2,000 |
+    | 2 | 2,000 | 200 | 1,000 | **1,200** | 1,000 |
+    | 3 | 1,000 | 100 | 1,000 | **1,100** | 0 |
+    | | | **600** | **3,000** | **3,600** | |
+
+    Comprobaciones de que el cuadro está bien: la columna de amortización suma
+    exactamente el capital prestado ($3{,}000$) y el saldo final del último año
+    cierra en **cero**. Si no cuadra, hay un error.
+
+    !!! tip "Alemán vs. Francés: cuál conviene"
+        En el **Alemán** la cuota es **decreciente** ($1{,}300 \to 1{,}100$) porque el
+        interés se calcula sobre un saldo que baja rápido y en línea recta.
+
+        En el **Francés** la cuota sería **constante**: con estos datos,
+        $C = 3{,}000 \times \frac{0.10}{1-(1.10)^{-3}} \approx \$1{,}206.34$ los tres
+        años, y el total pagado sería $\approx \$3{,}619$ — unos **$\$19$ más de
+        intereses** que en el Alemán.
+
+        El Alemán siempre paga menos intereses en total, porque amortiza capital más
+        rápido al principio. A cambio, exige mayor esfuerzo de caja en las primeras
+        cuotas. El Francés se prefiere en crédito hipotecario al consumidor
+        justamente porque la cuota fija es más fácil de presupuestar.
+
 ---
 *¡Felicidades por completar la Semana 13! Ya dominas la matemática detrás de los créditos bancarios y las pensiones. En la Semana 14 entraremos de lleno en el mundo de la incertidumbre con la **Estadística Aplicada**: Medidas de tendencia central, dispersión y el análisis de riesgo.*

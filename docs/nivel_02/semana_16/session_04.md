@@ -39,5 +39,58 @@ Contesta:
 2. Interpreta el coeficiente de la Tasa de Interés. ¿Qué significa matemáticamente ese número negativo? ¿Es estadísticamente confiable para tomar decisiones?
 3. Si el año que viene la empresa planea gastar $100,000 en publicidad (valor $X_1 = 100$) y se espera que la tasa de interés sea del 5% (valor $X_2 = 5$), ¿cuántas unidades matemáticas predice el modelo que se venderán? (Usa la fórmula $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2$).
 
+
+??? success "Solución del Ejercicio C"
+
+    **1. ¿Es la Publicidad estadísticamente significativa?**
+
+    **Sí.** El $p$-value de $\beta_1$ es **0.03**, menor que el umbral convencional
+    de $\alpha = 0.05$.
+
+    El $p$-value responde a: *"si la publicidad realmente no tuviera ningún efecto
+    sobre las ventas ($H_0: \beta_1 = 0$), ¿qué probabilidad habría de observar un
+    coeficiente tan grande como 4.2 solo por azar muestral?"*. La respuesta es 3 %:
+    lo bastante improbable como para **rechazar $H_0$** y concluir que el efecto es real.
+
+    Interpretación de la magnitud: **cada $\$1{,}000$ adicionales de publicidad
+    (una unidad de $X_1$) se asocian con 4.2 autos vendidos más**, manteniendo la
+    tasa de interés constante.
+
+    **2. Interpretación del coeficiente de la Tasa de Interés**
+
+    *Matemáticamente:* $\beta_2 = -15.5$ significa que **por cada punto porcentual
+    que sube la tasa del banco central, las ventas caen 15.5 unidades**, con la
+    publicidad constante. El signo negativo es económicamente coherente: los autos se
+    compran a crédito, y un crédito más caro reduce la demanda (Semanas 2 y 6).
+
+    *Estadísticamente:* **no es confiable.** Con $p = 0.20 > 0.05$, no podemos
+    rechazar $H_0: \beta_2 = 0$. Hay un 20 % de probabilidad de ver un coeficiente
+    así por puro azar, aunque la tasa de interés no influyera en nada.
+
+    !!! warning "El error que hay que evitar"
+        "No significativo" **no** quiere decir "el efecto es cero". Quiere decir que
+        **estos datos no alcanzan para demostrarlo**. Puede deberse a muestra
+        pequeña, a poca variación histórica de la tasa en el período, o a
+        colinealidad con otra variable.
+
+        Para decidir gasto publicitario, apóyate en $\beta_1$. Para decidir en
+        función de tasas, **consigue más datos antes de actuar**.
+
+    **3. Predicción del modelo**
+
+    $$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2$$
+
+    $$Y = 500 + 4.2(100) + (-15.5)(5)$$
+
+    $$Y = 500 + 420 - 77.5 = \mathbf{842.5 \text{ unidades}}$$
+
+    En la práctica se reporta **≈ 843 autos** (no se venden medias unidades).
+
+    **Sobre el $R^2 = 0.65$:** el modelo explica el 65 % de la variabilidad de las
+    ventas. Es razonable para datos económicos, pero deja un **35 % sin explicar**
+    (competencia, lanzamientos, estacionalidad, reputación de marca). La predicción
+    de 843 unidades es el **centro** de un rango, no una certeza: siempre debe
+    acompañarse de su intervalo de confianza.
+
 ---
-*¡Felicidades por completar la Semana 16! Has terminado el bloque de estadística pura. Ya sabes medir el riesgo, probar teorías y modelar variables. En la Semana 17 empezamos el Nivel 2 del Nivel 2: Excel financiero intermedio-avanzado y Modelación de Estados Financieros.*
+*¡Felicidades por completar la Semana 16! Has terminado el bloque de estadística pura. Ya sabes medir el riesgo, probar teorías y modelar variables. En la Semana 17 empezamos el bloque de Hojas de Cálculo y Modelación Financiera: Excel financiero intermedio-avanzado y Modelación de Estados Financieros.*
