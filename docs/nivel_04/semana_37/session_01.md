@@ -40,3 +40,33 @@ Asume que la empresa será vendida al final del año 5 por un múltiplo de merca
 * *Ejemplo:* Si el sector se transa a 8 veces el EBITDA y tu empresa generará $100M de EBITDA en el año 5, el TV será $800M. (Veremos a fondo los múltiplos en la Semana 38).
 
 ---
+
+
+## Del Enterprise Value al precio por acción
+
+El error más común al terminar un DCF es confundir el valor de **la empresa** con el valor de
+**las acciones**. El puente entre ambos es este:
+
+```mermaid
+flowchart TD
+    A["VP de los flujos explícitos<br/>(años 1 a n)"] --> C["ENTERPRISE VALUE<br/>(valor de toda la operación)"]
+    B["VP del Valor Terminal<br/>(perpetuidad de Gordon)"] --> C
+    C --> D["− Deuda financiera"]
+    D --> E["+ Efectivo y equivalentes"]
+    E --> F["EQUITY VALUE<br/>(valor de los accionistas)"]
+    F --> G["÷ Acciones en circulación"]
+    G --> H["TARGET PRICE<br/>valor intrínseco por acción"]
+    H --> I{"¿Compara con el<br/>precio de mercado?"}
+    I -->|"Intrínseco > mercado"| J["COMPRAR<br/>(infravalorada)"]
+    I -->|"Intrínseco < mercado"| K["VENDER<br/>(sobrevalorada)"]
+
+    style C fill:#1f77b4,color:#fff
+    style F fill:#ff7f0e,color:#fff
+    style H fill:#2ca02c,color:#fff
+    style J fill:#2ca02c,color:#fff
+    style K fill:#d62728,color:#fff
+```
+
+**Por qué se resta la deuda:** el Enterprise Value mide lo que vale el negocio completo,
+financiado por accionistas *y* acreedores. Los acreedores cobran primero, así que a los
+accionistas les corresponde solo lo que queda después de saldar la deuda.

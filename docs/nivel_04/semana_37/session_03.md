@@ -33,4 +33,20 @@
 
 *(Si la acción hoy cotiza en la bolsa a $25, tu recomendación de inversión es **COMPRAR**, porque el valor intrínseco es 39% superior al precio de mercado).*
 
+
+## Plantilla de Excel
+
+!!! abstract "Descarga: modelo DCF con sensibilidad"
+    **[:material-file-excel: dcf_wacc.xlsx](../../assets/plantillas/dcf_wacc.xlsx)**
+
+    La hoja **DCF** monta el modelo completo: flujos explícitos, valor terminal por Gordon,
+    puente de Enterprise Value a precio por acción, y el **peso del valor terminal sobre el EV**
+    como señal de alarma.
+
+    La hoja **Sensibilidad** es una matriz WACC × g de 36 celdas, cada una recalculando el DCF
+    entero. Es la forma profesional de presentar una valuación: **un rango, no un número**.
+
+    Con los datos de LogiTrans reproduce la solución de esta semana: EV **623,94**,
+    Equity **583,94** y **$116,79 por acción** (con el valor terminal pesando el 77 %).
+
 ---

@@ -31,4 +31,9 @@ No usa fórmulas matemáticas ni la Campana de Gauss. Toma los retornos diarios 
 
 > **⚠️ El Fatal Defecto del VaR:** El VaR te dice cuál es tu máxima pérdida en el 99% de los casos. Pero no te dice **qué pasa en ese 1% restante**. Si el VaR es de $1 Millón, en el 1% de los casos pierdes $1 Millón... ¿o pierdes $50 Millones? El VaR no lo sabe. En 2008, los bancos perdieron 10 veces su VaR porque asumió una distribución normal en un mercado que tenía "Colas Gordas" (Fat Tails).
 
+<figure markdown="span">
+  ![El VaR marca dónde empieza el peor 1 %; el Expected Shortfall mide la pérdida media dentro de esa cola](../../images/var_cvar.png)
+  <figcaption>El VaR marca dónde empieza el peor 1 %; el Expected Shortfall mide la pérdida media dentro de esa cola</figcaption>
+</figure>
+
 ---

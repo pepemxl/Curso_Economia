@@ -27,7 +27,7 @@ El costo matemático del leasing es exactamente el mismo que el préstamo bancar
 2. ¿Por qué en la fórmula del Flujo de Caja Libre de la Firma (FCFF) sumamos la De representación los impuestos se calculan sobre el EBIT (utilidad operativa) y NO sobre el EBT (utilidad antes de impuestos que ya tiene intereses restados)?
 
 **C. Ejercicio Práctico a entregar:**
-La empresa industrialGreenSolar está evaluando su Flujo de Caja Libre para este año. Tienes los siguientes datos:
+La empresa industrial GreenSolar está evaluando su Flujo de Caja Libre para este año. Tienes los siguientes datos:
 * EBIT: $2,000,000
 * Depreciación: $500,000
 * Intereses: $200,000 (No incluidos en el EBIT)
@@ -39,3 +39,77 @@ Contesta:
 1. Calcula el NOPAT: $EBIT \times (1 - \text{Tasa de Impuestos})$.
 2. Calcula el Valor del Escudo Fiscal de la depreciación (en efectivo).
 3. Construye el Flujo de Caja Libre de la Firma (FCFF): NOPAT + Depreciación - CapEx - Aumento en Capital de Trabajo. Muestra el resultado final en dólares.
+
+??? success "Solución del Ejercicio C"
+
+    **1. NOPAT (Utilidad Operativa Neta Después de Impuestos)**
+
+    $$NOPAT = EBIT \times (1 - t) = \$2{,}000{,}000 \times (1 - 0.20)$$
+
+    $$\mathbf{NOPAT = \$1{,}600{,}000}$$
+
+    **2. Escudo fiscal de la depreciación**
+
+    $$\text{Escudo}_{dep} = \text{Depreciación} \times t = \$500{,}000 \times 0.20$$
+
+    $$\mathbf{= \$100{,}000}$$
+
+    Este es uno de los conceptos más elegantes de la fiscalidad corporativa: **la
+    depreciación no cuesta efectivo, pero ahorra efectivo.**
+
+    El razonamiento en dos columnas:
+
+    | | Sin depreciación | Con depreciación |
+    |---|---|---|
+    | Base gravable | 2,500,000 | 2,000,000 |
+    | Impuestos (20 %) | 500,000 | 400,000 |
+    | | | **−$100,000 de impuestos** |
+
+    La empresa **no desembolsa** los $\$500{,}000$ de depreciación —ese dinero ya
+    salió cuando compró el activo— pero sí **deja de pagar $\$100{,}000$ al fisco**.
+    Es efectivo real que se queda en la caja.
+
+    Por eso los gobiernos usan la **depreciación acelerada** como incentivo a la
+    inversión: no cambia el impuesto total pagado a lo largo de la vida del activo,
+    pero lo **adelanta en el tiempo**, y por valor del dinero en el tiempo eso vale
+    dinero para la empresa.
+
+    **3. Flujo de Caja Libre de la Firma (FCFF)**
+
+    $$FCFF = NOPAT + \text{Depreciación} - CapEx - \Delta CT$$
+
+    | Concepto | Monto |
+    |---|---|
+    | NOPAT | 1,600,000 |
+    | (+) Depreciación | 500,000 |
+    | (−) CapEx | (800,000) |
+    | (−) Aumento en Capital de Trabajo | (300,000) |
+    | **= FCFF** | **1,000,000** |
+
+    $$\mathbf{FCFF = \$1{,}000{,}000}$$
+
+    !!! warning "Por qué los intereses de $200,000 no aparecen por ningún lado"
+        Es el error más frecuente en este cálculo, y el enunciado tiende la trampa al
+        dar el dato.
+
+        El **FCFF** es el flujo disponible para **todos** los proveedores de capital
+        —accionistas *y* acreedores— **antes** de repartirlo. Restar los intereses
+        sería descontar el pago a los acreedores de un flujo que precisamente les
+        pertenece en parte: los estarías contando dos veces.
+
+        El efecto del financiamiento **ya está incorporado en el WACC**, que es la
+        tasa a la que se descuenta este FCFF (Semana 24). Meter los intereses aquí
+        *y* usar el WACC sería doble contabilidad, y subvaluaría la empresa.
+
+        Por eso se parte del **EBIT** (antes de intereses) y no del EBT.
+
+        Si en cambio quisieras el **FCFE** (flujo para el accionista), entonces sí:
+
+        $$FCFE = FCFF - \text{Intereses}(1-t) + \text{Nueva deuda neta}$$
+
+        Con estos datos y sin deuda nueva:
+        $1{,}000{,}000 - 200{,}000(1-0.20) = \$840{,}000$.
+
+        **Regla para no equivocarse:** FCFF se descuenta al **WACC** y da el
+        *Enterprise Value*; FCFE se descuenta al **costo del patrimonio ($r_e$)** y da
+        directamente el *Equity Value*. Nunca mezcles los pares.

@@ -38,3 +38,89 @@ Contesta:
 1. Calcula el valor ajustado (HQLA) de GlobalBank aplicando los "haircuts" regulatorios de Basilea III.
 2. Calcula el LCR de GlobalBank. ¿Supera el banco el mínimo legal del 100%?
 3. Si los depositantes entran en pánico y las salidas netas proyectadas suben de $6,000 Millones a $7,000 Millones (Escenario Severamente Adverso), ¿cuál sería el nuevo LCR? ¿Sobreviviría GlobalBank a esta prueba de estrés?
+
+??? success "Solución del Ejercicio C"
+
+    **1. HQLA ajustado por haircuts de Basilea III**
+
+    | Activo | Valor | Ponderación | HQLA computable |
+    |---|---|---|---|
+    | Efectivo y reservas en Banco Central | 2,000 | 100 % | **2,000** |
+    | Bonos soberanos AAA a 6 meses | 3,000 | 100 % | **3,000** |
+    | Bonos corporativos AA a 1 año | 1,500 | 50 % | **750** |
+    | Hipotecas a 30 años | 10,000 | 0 % | **0** |
+    | | **16,500** | | **5,750** |
+
+    $$\mathbf{HQLA = \$5{,}750 \text{ millones}}$$
+
+    El dato revelador: **el banco tiene $\$16{,}500$ millones en activos, pero solo
+    $\$5{,}750$ millones cuentan como liquidez de alta calidad.** Los $\$10{,}000$
+    millones en hipotecas —el 61 % del balance— valen **cero** a efectos de LCR.
+
+    No es que sean malos activos; muchas hipotecas son excelentes préstamos. Es que
+    **no se pueden convertir en efectivo el martes por la mañana** para atender a
+    depositantes que hacen fila. La regla de Basilea mide *liquidez inmediata*, no
+    solvencia.
+
+    **2. Ratio de Cobertura de Liquidez**
+
+    $$LCR = \frac{HQLA}{\text{Salidas netas de efectivo a 30 días}}$$
+
+    $$LCR = \frac{5{,}750}{6{,}000} = 0.9583 = \mathbf{95.83\%}$$
+
+    **No supera el mínimo legal del 100 %.**
+
+    GlobalBank tiene un **déficit de $\$250$ millones** ($6{,}000 - 5{,}750$). En
+    términos prácticos: podría atender retiros durante unos **29 días** del escenario
+    de estrés de 30 días exigido, y se quedaría sin liquidez justo antes de llegar
+    a la meta.
+
+    Consecuencias regulatorias inmediatas: notificación al supervisor con un plan de
+    restauración, probable restricción de dividendos y bonos, y exigencia de corregir
+    el ratio en un plazo determinado.
+
+    **3. Escenario severamente adverso — salidas de $7,000 millones**
+
+    $$LCR_{estrés} = \frac{5{,}750}{7{,}000} = 0.8214 = \mathbf{82.14\%}$$
+
+    **No sobrevive.** El déficit se amplía a **$\$1{,}250$ millones**, y la cobertura
+    cae a unos **24-25 días** de los 30 requeridos.
+
+    | Escenario | Salidas | LCR | Déficit | ¿Cumple? |
+    |---|---|---|---|---|
+    | Base | 6,000 | 95.83 % | 250 | ❌ |
+    | Severamente adverso | 7,000 | 82.14 % | 1,250 | ❌❌ |
+
+    **Qué haría un tesorero para cerrar la brecha**
+
+    * **Subir el numerador:** vender bonos corporativos AA y sustituirlos por deuda
+      soberana (cada peso movido añade $\$0.50$ de HQLA); captar depósitos estables.
+    * **Bajar el denominador:** alargar el vencimiento del *funding* mayorista a más
+      de 30 días —lo que sale de la ventana de cálculo deja de computar como salida—
+      y migrar depósitos mayoristas volátiles hacia depósitos minoristas, que Basilea
+      pondera con tasas de fuga mucho menores.
+    * **Reducir compromisos** no dispuestos de líneas de crédito, que también generan
+      salidas proyectadas.
+
+    !!! tip "LCR y NSFR: dos plazos, dos preguntas"
+        Basilea III introdujo **dos** ratios de liquidez complementarios, y conviene
+        no confundirlos:
+
+        | | **LCR** | **NSFR** |
+        |---|---|---|
+        | Horizonte | 30 días | 1 año |
+        | Pregunta | ¿Sobrevivo a una corrida bancaria? | ¿Mi financiamiento es estructuralmente estable? |
+        | Fórmula | HQLA / Salidas netas 30d | Financiamiento estable disponible / requerido |
+        | Mínimo | 100 % | 100 % |
+
+        El **LCR** es el extintor de incendios; el **NSFR** es la calidad de la
+        construcción.
+
+        Ambos nacieron de una lección concreta de 2008: **Lehman Brothers y Northern
+        Rock eran solventes en el papel** —sus activos superaban sus pasivos— pero
+        murieron por iliquidez. No pudieron convertir activos en efectivo lo bastante
+        rápido cuando el financiamiento mayorista de corto plazo se evaporó en
+        cuestión de días.
+
+        La lección que resume Basilea III: **la solvencia te mata lentamente; la
+        liquidez te mata en una semana.**

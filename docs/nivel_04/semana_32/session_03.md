@@ -19,4 +19,19 @@ El Excel te arroja que el promedio de esos días desastrosos fue un retorno de *
 * **CVaR (1 día, 99%)** = $10,000,000 \times 0.048 = \mathbf{\$480,000}$
 * *Interpretación:* Si ocurre un evento extremo (caes en el 1% de la cola), tu pérdida esperada real será de $480,000, no de $348,900. Por eso el regulador te exige reservar capital por $480,000.
 
+
+## Plantilla de Excel
+
+!!! abstract "Descarga: VaR paramétrico y cobertura"
+    **[:material-file-excel: var_montecarlo.xlsx](../../assets/plantillas/var_montecarlo.xlsx)**
+
+    La hoja **VaR paramétrico** calcula el VaR a 1 y a *T* días, el **Expected Shortfall** y el
+    número de contratos de futuros para cubrir la cartera ajustando por *beta*.
+
+    Con los datos del ejercicio: VaR 1 día ≈ **$232.635**, VaR 10 días ≈ **$735.656** y
+    **24 contratos** a vender.
+
+    (El libro usa `NORM.S.INV(99%)` = 2,32635 en lugar del 2,326 redondeado del enunciado; de
+    ahí la pequeña diferencia respecto a los $232.600 de la solución.)
+
 ---

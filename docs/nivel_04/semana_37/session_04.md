@@ -45,3 +45,96 @@ Contesta:
 2. Calcula el Valor Terminal al final del Año 3 y tráelo a Valor Presente (Año 0). Recuerda que $FCFF_{Año4} = FCFF_{Año3} \times (1+g)$.
 3. Calcula el Enterprise Value (EV) total.
 4. Calcula el Equity Value (Valor del Patrimonio) y el Valor Intrínseco por Acción (Target Price).
+
+??? success "Solución del Ejercicio C"
+
+    **1. Valor Presente de los FCFF explícitos (WACC = 12 %)**
+
+    | Año | FCFF | Factor $1/(1.12)^t$ | Valor Presente |
+    |---|---|---|---|
+    | 1 | 50.00 | 0.8929 | **44.6429** |
+    | 2 | 60.00 | 0.7972 | **47.8316** |
+    | 3 | 70.00 | 0.7118 | **49.8246** |
+    | | | **Suma** | **142.2991** |
+
+    $$\mathbf{VP_{explícito} = \$142.30 \text{ millones}}$$
+
+    **2. Valor Terminal (Gordon) y su valor presente**
+
+    Primero el flujo del primer año de la perpetuidad:
+
+    $$FCFF_4 = FCFF_3 \times (1+g) = 70 \times 1.015 = \$71.05$$
+
+    $$TV_3 = \frac{FCFF_4}{WACC - g} = \frac{71.05}{0.12 - 0.015} = \frac{71.05}{0.105}$$
+
+    $$TV_3 = \$676.67 \text{ millones}$$
+
+    Este valor está expresado **al final del Año 3**, así que hay que traerlo 3
+    períodos:
+
+    $$VP(TV) = \frac{676.67}{(1.12)^3} = \frac{676.67}{1.404928} = \mathbf{\$481.64 \text{ millones}}$$
+
+    !!! danger "El error de descuento más común del DCF"
+        El Valor Terminal calculado con Gordon queda situado en el **año $n$**, no en
+        el año $n+1$, aunque use el flujo del año 4 en el numerador. Se descuenta
+        por $(1+WACC)^3$, **nunca** por $(1+WACC)^4$.
+
+        Descontar un período de más subvaluaría la empresa en un 12 % del componente
+        más grande del modelo. Es un error que aparece constantemente en modelos
+        reales.
+
+    **3. Enterprise Value**
+
+    $$EV = VP_{explícito} + VP(TV) = 142.30 + 481.64$$
+
+    $$\mathbf{EV = \$623.94 \text{ millones}}$$
+
+    **4. Equity Value y Target Price**
+
+    $$\text{Equity Value} = EV - \text{Deuda Neta} = 623.94 - 40 = \mathbf{\$583.94 \text{ millones}}$$
+
+    $$\text{Valor por acción} = \frac{583.94}{5 \text{ M acciones}} = \mathbf{\$116.79}$$
+
+    **Resumen del puente de valuación:**
+
+    | Concepto | Millones |
+    |---|---|
+    | VP de flujos explícitos (Años 1-3) | 142.30 |
+    | (+) VP del Valor Terminal | 481.64 |
+    | **= Enterprise Value** | **623.94** |
+    | (−) Deuda Neta | (40.00) |
+    | **= Equity Value** | **583.94** |
+    | ÷ Acciones en circulación | 5.00 M |
+    | **= Valor intrínseco por acción** | **$116.79** |
+
+    !!! warning "El Valor Terminal es el 77 % de la valuación"
+        $$\frac{481.64}{623.94} = \mathbf{77.2\%}$$
+
+        Más de tres cuartas partes del valor de LogiTrans **no provienen de los flujos
+        que proyectaste con detalle**, sino de una fórmula que asume crecimiento
+        constante para siempre. Es completamente normal —en DCF reales el TV suele
+        pesar entre 60 % y 80 %— pero obliga a dos disciplinas:
+
+        **Primera: sé conservador con $g$.** Ninguna empresa puede crecer
+        indefinidamente por encima de la economía global (~2-3 % real), porque
+        acabaría siendo el PIB mundial. Aquí $g = 1.5\%$ es prudente.
+
+        Observa la sensibilidad, que es la lección del caso WeWork de esta misma
+        semana:
+
+        | $g$ | TV | Valor por acción |
+        |---|---|---|
+        | 1.0 % | $642.7 | $111.0 |
+        | **1.5 %** | **$676.7** | **$116.79** |
+        | 2.5 % | $755.4 | $128.0 |
+        | 5.0 % | $1,050.0 | $170.0 |
+
+        Y si alguien pusiera $g \ge WACC$, el denominador se vuelve cero o negativo:
+        el modelo devuelve infinito o un valor negativo sin sentido. Matemáticamente
+        significaría una empresa que crece más rápido que su costo de capital para
+        siempre — algo imposible.
+
+        **Segunda: presenta siempre un rango, no un punto.** Un target price de
+        $\$116.79$ transmite una falsa precisión. Lo profesional es una **matriz de
+        sensibilidad bidimensional WACC × g** y una recomendación del tipo
+        *"valor razonable entre $\$105$ y $\$130$"*.

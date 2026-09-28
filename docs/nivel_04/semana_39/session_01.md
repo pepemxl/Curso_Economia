@@ -35,4 +35,9 @@ $$ \text{Sharpe} = \frac{R_p - R_f}{\sigma_p} $$
 *(Retorno del Portafolio - Tasa Libre de Riesgo) / Volatilidad del Portafolio).*
 Te dice cuánto retorno extra generó el gestor por cada unidad de riesgo asumido. Un Sharpe mayor a 1.0 es bueno; mayor a 2.0 es excepcional. (Recuerda el caso del Trader con retornos volátiles de la Semana 14).
 
+<figure markdown="span">
+  ![El Fondo Beta apalancado domina al Fondo Alfa: mismo riesgo, 600 puntos básicos más de retorno](../../images/frontera_eficiente.png)
+  <figcaption>El Fondo Beta apalancado domina al Fondo Alfa: mismo riesgo, 600 puntos básicos más de retorno</figcaption>
+</figure>
+
 ---

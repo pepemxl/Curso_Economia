@@ -10,7 +10,7 @@
 
 ## 2. El Impuesto a las Sociedades (Corporate Income Tax)
 Es el tributo que las empresas pagan sobre su beneficio neto (Utilidad Antes de Impuestos - EBT). 
-* **Tasa Efectiva vs. Tasa Legal:** La tasa legal es la que dicta el gobierno (ej. 25% o 30%). La tasa efectiva es lo que la empresa *realmente* paga después de usar deducciones legales, créditos fiscales o имея operaciones en paraísos fiscales. (En la Semana 36 veremos planeación tributaria).
+* **Tasa Efectiva vs. Tasa Legal:** La tasa legal es la que dicta el gobierno (ej. 25% o 30%). La tasa efectiva es lo que la empresa *realmente* paga después de usar deducciones legales, créditos fiscales o teniendo operaciones en paraísos fiscales. (En la Semana 36 veremos planeación tributaria).
 * **Regla Matemática de los Impuestos:** Los impuestos son un gasto de **efectivo real**. Aparecen en el Estado de Resultados (restando del EBT para hallar la Utilidad Neta) y en el Flujo de Efectivo de Operación (CFO) como una salida de caja.
 
 > **💥 El concepto del "Escudo Fiscal" (Tax Shield):**

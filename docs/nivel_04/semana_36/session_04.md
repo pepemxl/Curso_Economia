@@ -36,3 +36,76 @@ Contesta:
 1. ¿Cuál es el nuevo impuesto a pagar en EE. UU. después de pagar las regalías a Bermudas?
 2. ¿Cuál es la utilidad retenida en Bermudas? ¿Cuánto impuesto pagan en Bermudas?
 3. Calcula el ahorro fiscal total logrado por la multinacional gracias a esta planeación tributaria de precios de transferencia. Compara el gasto fiscal total consolidado antes y después de la estrategia.
+
+??? success "Solución del Ejercicio C"
+
+    **1. Nuevo impuesto a pagar en EE. UU.**
+
+    $$\text{Utilidad USA} = \$100M - \$80M \;(\text{regalías}) = \$20M$$
+
+    $$\text{Impuesto USA} = \$20M \times 21\% = \mathbf{\$4.2 \text{ millones}}$$
+
+    **2. Utilidad e impuesto en Bermudas**
+
+    $$\text{Utilidad Bermudas} = \$80M \;(\text{propia}) + \$80M \;(\text{regalías}) = \mathbf{\$160 \text{ millones}}$$
+
+    $$\text{Impuesto Bermudas} = \$160M \times 0\% = \mathbf{\$0}$$
+
+    **3. Ahorro fiscal total**
+
+    | | Antes | Después |
+    |---|---|---|
+    | Utilidad USA | 100 | 20 |
+    | Impuesto USA (21 %) | **21.0** | **4.2** |
+    | Utilidad Bermudas | 80 | 160 |
+    | Impuesto Bermudas (0 %) | **0.0** | **0.0** |
+    | **Utilidad consolidada** | **180** | **180** |
+    | **Gasto fiscal consolidado** | **21.0** | **4.2** |
+    | **Tasa efectiva consolidada** | **11.67 %** | **2.33 %** |
+
+    $$\text{Ahorro} = \$21M - \$4.2M = \mathbf{\$16.8 \text{ millones}}$$
+
+    Una reducción del **80 % del gasto fiscal**, y la tasa efectiva pasa de 11.67 % a
+    2.33 %.
+
+    **El punto clave: la utilidad consolidada no cambió.** Siguen siendo $\$180$
+    millones antes y después. La regalía es una transacción **intragrupo**: se elimina
+    en la consolidación. No se generó ni un dólar de valor económico nuevo — solo se
+    **reubicó la base gravable** desde una jurisdicción con impuestos hacia una sin
+    ellos.
+
+    **Impacto en la valuación (el motivo real de la estrategia)**
+
+    Los $\$16.8$ millones ahorrados van directos al NOPAT y, por tanto, al FCFF:
+
+    $$NOPAT = EBIT \times (1 - t_{efectiva})$$
+
+    Con $t = 11.67\%$ frente a $t = 2.33\%$, el flujo de caja libre sube ~9 puntos
+    porcentuales **cada año**. Descontado a perpetuidad en un DCF (Semana 37), ese
+    diferencial recurrente puede representar **cientos de millones de valor
+    empresarial**. Es exactamente el mecanismo que infló las valuaciones tecnológicas
+    descrito en el caso de Apple.
+
+    !!! warning "Legal ≠ sostenible: el riesgo que un analista debe modelar"
+        Esta planeación es **elusión** (legal), no **evasión** (ilegal). Pero para
+        quien valora la empresa, la distinción relevante es otra: **¿es sostenible?**
+
+        Factores que han desmantelado estas estructuras desde 2015:
+
+        * **BEPS (OCDE):** el proyecto contra la erosión de bases gravables obliga a
+          que la utilidad se declare donde ocurre la **actividad económica real**, no
+          donde está registrada la propiedad intelectual.
+        * **Impuesto mínimo global del 15 %** (Pilar Dos, OCDE/G20): si la filial
+          tributa por debajo del 15 %, **el país de la matriz cobra la diferencia**.
+          Esto anula por completo el beneficio de una jurisdicción al 0 %.
+        * **Irlanda cerró el "Double Irish"** en 2015, con período de gracia hasta 2020.
+        * **Precios de transferencia:** una regalía de $\$80$ millones debe cumplir el
+          principio de *arm's length* —el precio que cobrarían partes independientes—.
+          Si el fisco la considera inflada, viene el ajuste más multas e intereses.
+
+        **Implicación práctica para el modelo:** al valorar una multinacional con
+        tasa efectiva anormalmente baja, **no proyectes esa tasa a perpetuidad.**
+        Modela una convergencia gradual hacia la tasa estatutaria o al menos al 15 %
+        global, y trata la diferencia como un **pasivo contingente**. Ese fue
+        precisamente el error de quienes valoraron a las tecnológicas asumiendo un
+        2 % eterno.

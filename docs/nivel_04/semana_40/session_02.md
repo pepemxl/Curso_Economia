@@ -52,7 +52,7 @@ El reporte debe entregarse en **formato PDF (máximo 15 páginas)** acompañado 
 
 ### Sección 7: Conclusión y Recomendación Final (1 página)
 * Sintetiza la tesis de inversión en un solo párrafo convincente.
-* Define los **Catalizadores**: ¿Qué eventos harán que la acción suba en los próximos 12 meses? (Ej. Lanzamiento de un nuevo producto, reporte de earnings en Marzo,.split de acciones).
+* Define los **Catalizadores**: ¿Qué eventos harán que la acción suba en los próximos 12 meses? (Ej. Lanzamiento de un nuevo producto, reporte de earnings en Marzo, split de acciones).
 * Define el **Stop-Loss o Punto de Salida**: ¿En qué momento o bajo qué condición reconocerías que tu tesis de inversión es incorrecta y debes vender?
 
 ---

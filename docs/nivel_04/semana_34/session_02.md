@@ -25,3 +25,42 @@ Cada año, los bancos centrales someten a los bancos a exámenes de estrés mate
 El banco debe demostrar que, incluso en el Escenario Severamente Adverso, su ratio de capital (CET1) no cae por debajo del mínimo legal (ej. 4.5%). Si suspende el examen, el regulador le prohíbe pagar dividendos y le exige recapitalizarse inmediatamente.
 
 ---
+
+## Los tres pilares de Basilea
+
+El marco no es solo un conjunto de ratios: se estructura en tres pilares complementarios.
+
+**Pilar 1 — Requerimientos mínimos de capital.** Las fórmulas: capital sobre activos ponderados
+por riesgo, para riesgo de crédito, mercado y operativo. Es la parte cuantitativa.
+
+**Pilar 2 — Revisión supervisora.** El supervisor evalúa si el capital del Pilar 1 es suficiente
+para el perfil **concreto** de esa entidad, y puede exigir más. Aquí entran riesgos que las
+fórmulas no capturan: concentración, riesgo de tasa en la cartera bancaria, riesgo de modelo.
+
+**Pilar 3 — Disciplina de mercado.** Obligación de publicar información detallada sobre riesgos
+y capital, para que analistas, acreedores y depositantes puedan juzgar por sí mismos. La lógica:
+la transparencia disciplina mejor que la norma.
+
+**La evolución del marco:**
+
+| Acuerdo | Año | Aportación principal | Fallo revelado |
+|---|---|---|---|
+| **Basilea I** | 1988 | Capital mínimo del 8 % sobre activos ponderados | Ponderaciones demasiado toscas; arbitraje regulatorio |
+| **Basilea II** | 2004 | Modelos internos; los tres pilares | **Prociclicidad**; los bancos calibraban a la baja |
+| **Basilea III** | 2010-19 | Más y mejor capital, colchones, **LCR y NSFR**, ratio de apalancamiento | — |
+| **Basilea III final** ("IV") | 2017-25 | *Output floor*: el modelo interno no puede dar menos del 72,5 % del estándar | — |
+
+!!! warning "La prociclicidad: el defecto de diseño más difícil de resolver"
+    En la expansión, los impagos son bajos, los modelos estiman poco riesgo, se exige poco
+    capital y los bancos **prestan más** — alimentando la burbuja.
+
+    En la recesión ocurre lo contrario: los modelos ven más riesgo, se exige más capital, y los
+    bancos **restringen el crédito** justo cuando la economía más lo necesita. La regulación
+    amplifica el ciclo en lugar de amortiguarlo.
+
+    La respuesta de Basilea III es el **colchón anticíclico**: capital adicional (0-2,5 %) que
+    el supervisor exige acumular en los buenos tiempos y **libera** en los malos. Es
+    conceptualmente correcto y políticamente difícil: exige que alguien declare que la economía
+    va "demasiado bien".
+
+---
