@@ -121,6 +121,16 @@ Empezaremos por entender el entorno y el lenguaje de los negocios, pasando por l
 
 ---
 
+## Nivel 5: Certificación AMIB
+
+*Guía para obtener la certificación que exige la ley en México para asesorar inversiones con dinero de terceros.*
+
+*   **[Guía de certificación](nivel_05/index.md):** Figura 3 – Asesor en Estrategias de Inversión (Serie 210), pasos, costos y vigencia.
+*   **[Temario vs. curso](nivel_05/temario.md):** qué semanas del curso cubren cada área del examen y qué falta estudiar.
+*   **[Preparación y trámites](nivel_05/plan_estudio.md):** plan de estudio de 12 semanas y lista de trámites.
+
+---
+
 ### Recomendaciones para aprovechar al máximo el curso:
 
 1. **Materiales:** Consigue libros clave como *Fundamentos de Finanzas Corporativas* (Brealey, Myers, Allen) y *Economía* (Mankiw).

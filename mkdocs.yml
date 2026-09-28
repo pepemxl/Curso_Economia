@@ -237,6 +237,10 @@ nav:
           - 'Sesión 2: Estructura del Reporte': 'nivel_04/semana_40/session_02.md'
           - 'Sesión 3: Entregables y Caso de Referencia': 'nivel_04/semana_40/session_03.md'
           - 'Sesión 4: Evaluación y Cierre': 'nivel_04/semana_40/session_04.md'
+  - 'Nivel 5: Certificación AMIB':
+      - 'Guía de certificación': 'nivel_05/index.md'
+      - 'Temario vs. curso': 'nivel_05/temario.md'
+      - 'Preparación y trámites': 'nivel_05/plan_estudio.md'
 plugins:
   - search:
       lang: es
