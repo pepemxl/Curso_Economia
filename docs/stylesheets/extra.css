@@ -1,0 +1,30 @@
+/* Las formulas largas (WACC, DCF, Gordon) no deben desbordar en movil. */
+mjx-container[jax="CHTML"][display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.2rem 0;
+}
+
+/* Tablas financieras: scroll propio en lugar de romper el ancho de la pagina. */
+.md-typeset__table {
+  width: 100%;
+}
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+}
+.md-typeset table:not([class]) td:not(:first-child),
+.md-typeset table:not([class]) th:not(:first-child) {
+  text-align: right;
+}
+
+/* Pies de figura centrados y algo mas discretos que el cuerpo del texto. */
+.md-typeset figure figcaption {
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 0.4rem;
+}
+
+/* Bloque de solucion plegable: verde discreto para distinguirlo del enunciado. */
+.md-typeset details.success > summary {
+  font-weight: 700;
+}

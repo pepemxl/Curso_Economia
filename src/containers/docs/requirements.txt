@@ -1,7 +1,9 @@
+# Dependencias del sitio de documentacion (imagen Docker eco-docs).
+# Versiones fijadas: el sitio depende de plugins de terceros y la transicion
+# a MkDocs 2.0 introduce cambios incompatibles.
+# No desfijar sin volver a correr `make docs_build`.
 mkdocs[i18n]==1.6.1
-mkdocs-glightbox
-mkdocs-material
-mkdocs-mermaid2-plugin
-mkdocs-minify-plugin
-python-markdown-math
-mkdocs-redirects
+mkdocs-material==9.7.6
+mkdocs-glightbox==0.5.2
+mkdocs-mermaid2-plugin==1.2.3
+pymdown-extensions==10.21.3

@@ -1,0 +1,35 @@
+name: Docs
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: mkdocs build --strict
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: src/containers/docs/requirements.txt
+
+      - name: Instalar dependencias fijadas
+        run: pip install -r src/containers/docs/requirements.txt
+
+      # --strict convierte en error cualquier enlace roto del nav, referencia
+      # a imagen inexistente o clave invalida de configuracion.
+      - name: Build estricto
+        run: mkdocs build --strict
+
+      - name: Publicar el sitio como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site/
+          retention-days: 7
