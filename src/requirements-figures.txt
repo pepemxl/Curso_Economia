@@ -1,0 +1,9 @@
+# Dependencias para generar los artefactos del curso: figuras (`make figures`)
+# y plantillas de Excel (`make plantillas`).
+# Deliberadamente separadas de las del sitio: la imagen de docs no necesita
+# matplotlib ni numpy.
+matplotlib==3.10.7
+numpy==2.2.6
+
+# Generacion y verificacion de las plantillas .xlsx (`make plantillas`)
+openpyxl==3.1.5
