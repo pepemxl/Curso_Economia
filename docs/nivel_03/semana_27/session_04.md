@@ -33,3 +33,63 @@ Contesta:
 1. Calcula el Valor Post-Money de la startup hoy, descontando el Valor Terminal a 4 años al 40% anual. (Muestra la fórmula $VP = VF / (1+r)^t$).
 2. Calcula el Valor Pre-Money de la startup.
 3. ¿Qué porcentaje de participación accionaria (Ownership %) debe exigir tu fondo a cambio de los $5 Millones?
+
+??? success "Solución del Ejercicio C"
+
+    **1. Valor Post-Money**
+
+    Se descuenta el valor de salida a la tasa exigida por el fondo:
+
+    $$VP = \frac{VF}{(1+r)^t} = \frac{80{,}000{,}000}{(1.40)^4}$$
+
+    $$(1.40)^4 = 3.8416$$
+
+    $$VP = \frac{80{,}000{,}000}{3.8416} = \mathbf{\$20{,}824{,}656}$$
+
+    **2. Valor Pre-Money**
+
+    $$\text{Pre-Money} = \text{Post-Money} - \text{Inversión}$$
+
+    $$= 20{,}824{,}656 - 5{,}000{,}000 = \mathbf{\$15{,}824{,}656}$$
+
+    La distinción es la que más confusión genera en una negociación: el **pre-money**
+    es lo que vale la empresa *antes* de recibir el cheque —el trabajo de los
+    fundadores hasta hoy—, y el **post-money** ya incluye los $\$5$ millones que
+    acaban de entrar a la caja. El dinero del fondo no desaparece: se convierte en
+    activo de la propia empresa.
+
+    **3. Participación accionaria exigida**
+
+    $$\% \text{Ownership} = \frac{\text{Inversión}}{\text{Post-Money}} = \frac{5{,}000{,}000}{20{,}824{,}656}$$
+
+    $$\mathbf{= 24.01\%}$$
+
+    **Comprobación de la lógica del fondo:** con el 24.01 % de una salida de
+    $\$80$ millones, el fondo recibiría
+    $0.2401 \times 80{,}000{,}000 = \$19.2$ millones. Sobre $\$5$ millones invertidos
+    son **3.84×** en 4 años, que anualizado es exactamente
+    $3.84^{1/4} - 1 = 40\%$ ✓ — su tasa objetivo.
+
+    !!! note "Por qué un VC exige 40 % anual"
+        Un 40 % anual parece usura frente al 8-12 % de una empresa madura. La razón
+        no es codicia sino **aritmética de portafolio**: de cada 10 inversiones de un
+        fondo de capital de riesgo, típicamente 5 mueren por completo, 3 devuelven
+        más o menos lo invertido, y solo 1 o 2 producen el retorno de todo el fondo.
+
+        Ese 40 % es la tasa que **la inversión que sobrevive** debe rendir para
+        cubrir a las que no. También compensa la **iliquidez** (el capital queda
+        atrapado 4-7 años sin mercado secundario) y la enorme incertidumbre de la
+        proyección de salida.
+
+    !!! warning "Lo que este cálculo todavía ignora: la dilución"
+        El resultado supone que **no habrá más rondas de financiamiento**, algo casi
+        nunca cierto. Si MediTech levanta una Serie B y una Serie C antes de la
+        salida, la participación del 24.01 % se **diluye** con cada emisión de
+        acciones nuevas.
+
+        Por eso los fondos calculan el porcentaje sobre la **capitalización
+        totalmente diluida** (incluyendo el *pool* de opciones para empleados, las
+        notas convertibles y los SAFE pendientes), y negocian *cláusulas
+        antidilución* y derechos *pro-rata* para mantener su posición. Pedir 24 %
+        hoy sin protección puede convertirse en 12 % el día de la salida — y la mitad
+        del retorno objetivo.

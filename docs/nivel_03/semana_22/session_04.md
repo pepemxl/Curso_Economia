@@ -1,6 +1,6 @@
 # Semana 22 · Sesión 4: Caso de Estudio y Evaluación
 
-## 6. Análisis de Caso: La наркo-economía del EBITDA en las Telecomunicaciones
+## 6. Análisis de Caso: La narco-economía del EBITDA en las Telecomunicaciones
 *Eres un analista de renta fija evalUando comprar los bonos de una gran empresa de telecomunicaciones (ej. estilo AT&T o Vodafone).*
 
 La empresa presume en sus presentaciones de titulares: *"Generamos un EBITDA récord de $10,000 millones este año"*. El CEO propone pagar un dividendo gigantesco usando ese dinero.
@@ -38,3 +38,78 @@ Contesta:
 1. **Análisis Dupont:** Usa los datos (Ventas, Utilidad Neta, Activos Totales, Patrimonio) para calcular los 3 componentes del modelo Dupont y comprueba que el ROE final es del 30%. (Muestra las 3 multiplicaciones).
 2. **Cálculo de FCFF:** Usando el EBITDA de $600k, Depreciación de $100k, y asumiendo que el EBIT es de $500k. Calcula el NOPAT ($EBIT \times (1 - 0.25)$). 
 3. Si la empresa tuvo un CapEx de $150,000 y un aumento en capital de trabajo de $50,000, ¿cuál es el Flujo de Caja Libre de la Firma (FCFF)? Muestra el desglose paso a paso.
+
+??? success "Solución del Ejercicio C"
+
+    **1. Análisis Dupont de "LogisticsPro"**
+
+    El modelo descompone el ROE en tres palancas independientes:
+
+    $$ROE = \underbrace{\frac{UN}{Ventas}}_{\text{Margen}} \times \underbrace{\frac{Ventas}{Activos}}_{\text{Rotación}} \times \underbrace{\frac{Activos}{Patrimonio}}_{\text{Apalancamiento}}$$
+
+    *Componente 1 — Margen Neto (rentabilidad):*
+
+    $$\frac{300{,}000}{5{,}000{,}000} = 0.06 = \mathbf{6\%}$$
+
+    *Componente 2 — Rotación de Activos (eficiencia):*
+
+    $$\frac{5{,}000{,}000}{2{,}500{,}000} = \mathbf{2.0\times}$$
+
+    *Componente 3 — Multiplicador de Apalancamiento (financiamiento):*
+
+    $$\frac{2{,}500{,}000}{1{,}000{,}000} = \mathbf{2.5\times}$$
+
+    *Producto de los tres:*
+
+    $$ROE = 0.06 \times 2.0 \times 2.5 = 0.30 = \mathbf{30\%} \quad ✓$$
+
+    **Comprobación directa:** $300{,}000 / 1{,}000{,}000 = 30\%$ ✓
+
+    !!! warning "De dónde sale realmente ese 30 %"
+        Un ROE del 30 % suena espectacular, pero el Dupont revela su origen: el
+        margen es modesto (6 %) y la eficiencia es normal (2.0×). **El
+        apalancamiento de 2.5× es lo que infla el resultado.**
+
+        Traducido: de los $\$2.5$ millones de activos, **$\$1.5$ millones son deuda**
+        ($2{,}500{,}000 - 1{,}000{,}000$). La empresa opera con 60 % de deuda sobre
+        activos.
+
+        Sin apalancamiento (financiada 100 % con patrimonio), su ROE sería
+        $6\% \times 2.0 = 12\%$. El resto —18 puntos porcentuales— es **riesgo
+        financiero, no talento operativo**. Y ese mismo apalancamiento multiplica las
+        pérdidas cuando el ciclo se voltea. Es exactamente la razón por la que se
+        descompone el ROE en lugar de mirarlo como un solo número.
+
+    **2. Cálculo del NOPAT**
+
+    $$NOPAT = EBIT \times (1 - t) = 500{,}000 \times (1 - 0.25) = \mathbf{\$375{,}000}$$
+
+    El NOPAT es la utilidad operativa después de impuestos **como si la empresa no
+    tuviera deuda**. Se parte del EBIT, no del EBT, precisamente para excluir el
+    efecto del financiamiento: el FCFF pertenece a *todos* los proveedores de capital
+    (accionistas **y** acreedores), así que el ahorro fiscal de la deuda no se cuenta
+    aquí — ya está recogido en el WACC (Semana 24).
+
+    **3. Flujo de Caja Libre de la Firma (FCFF)**
+
+    $$FCFF = NOPAT + D\&A - CapEx - \Delta \text{Capital de Trabajo}$$
+
+    | Concepto | Monto |
+    |---|---|
+    | NOPAT | 375,000 |
+    | (+) Depreciación y Amortización | 100,000 |
+    | (−) CapEx | (150,000) |
+    | (−) Aumento en Capital de Trabajo | (50,000) |
+    | **= FCFF** | **275,000** |
+
+    **FCFF = $275,000.**
+
+    Los signos, uno a uno: la **D&A se suma** porque redujo el EBIT sin salida de
+    caja; el **CapEx se resta** porque es caja real que sale a mantener la capacidad
+    productiva; y el **aumento de capital de trabajo se resta** porque más inventario
+    o más cartera por cobrar inmovilizan efectivo.
+
+    Estos $\$275{,}000$ son lo que se descuenta al WACC en un modelo DCF (Semana 37).
+    Nota la distancia con el EBITDA de $\$600{,}000$: **el EBITDA sobreestima la caja
+    disponible en más del doble**, porque ignora impuestos, inversión y capital de
+    trabajo. Por eso se dice que el EBITDA no es flujo de caja.

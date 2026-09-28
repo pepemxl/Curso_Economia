@@ -32,3 +32,70 @@ Contesta:
 1. ¿Cuánto efectivo pagó el fondo en total por comprar estas opciones Put? (Calcula la Prima Total).
 2. Si al vencimiento el S&P 500 está en 4,200 puntos (caída del mercado), ¿el fondo ejercerá la opción? ¿Cuál será la ganancia bruta (pago total) y la ganancia neta (restando la prima) de esta jugada de cobertura?
 3. ¿Cuál sería la pérdida máxima que puede sufrir el comprador de este Put si el mercado, en lugar de caer, sube a 5,000 puntos?
+
+??? success "Solución del Ejercicio C"
+
+    **1. Prima total pagada**
+
+    $$\text{Prima por contrato} = 50 \text{ puntos} \times 100 \;(\text{multiplicador}) = \$5{,}000$$
+
+    $$\text{Prima total} = \$5{,}000 \times 10 \text{ contratos} = \mathbf{\$50{,}000}$$
+
+    Esos $\$50{,}000$ salen de la caja **hoy**, pase lo que pase después. Es el costo
+    del "seguro".
+
+    **2. El S&P 500 cae a 4,200 al vencimiento**
+
+    *¿Se ejercerá?* **Sí.** El Put da el derecho a **vender** a 4,400 cuando el
+    mercado está en 4,200. Está *in the money* por:
+
+    $$4{,}400 - 4{,}200 = 200 \text{ puntos}$$
+
+    *Ganancia bruta (payoff):*
+
+    $$200 \text{ puntos} \times 100 \times 10 \text{ contratos} = \mathbf{\$200{,}000}$$
+
+    *Ganancia neta:*
+
+    $$\$200{,}000 - \$50{,}000 \;(\text{prima}) = \mathbf{\$150{,}000}$$
+
+    Un retorno del **300 %** sobre la prima invertida. El **punto de equilibrio** de
+    la posición está en $4{,}400 - 50 = \mathbf{4{,}350}$ puntos: por debajo de ahí
+    la cobertura empieza a dar ganancia neta.
+
+    **3. Pérdida máxima si el mercado sube a 5,000**
+
+    $$\text{Pérdida máxima} = \text{Prima pagada} = \mathbf{\$50{,}000}$$
+
+    Con el índice en 5,000, nadie ejerce el derecho de vender a 4,400 —sería regalar
+    600 puntos—. La opción **expira sin valor** y se pierde íntegra la prima.
+
+    Esta es la asimetría que define la compra de opciones:
+
+    | | Comprador del Put |
+    |---|---|
+    | Pérdida máxima | **Limitada** a la prima ($\$50{,}000$) |
+    | Ganancia máxima | Enorme (crece punto a punto según cae el índice) |
+
+    !!! tip "Esto no es una apuesta: es un seguro"
+        El enunciado dice que el fondo hace una "jugada de cobertura", y el matiz lo
+        cambia todo. Supongamos que el fondo tiene una cartera de $\$4.5$ millones
+        replicando el S&P 500 (equivalente a $4{,}500 \times 100 \times 10$).
+
+        | Escenario | Cartera | Puts | **Neto** |
+        |---|---|---|---|
+        | Índice cae a 4,200 | −$300,000 | +$150,000 | **−$150,000** |
+        | Índice sube a 5,000 | +$500,000 | −$50,000 | **+$450,000** |
+
+        Cuando el mercado cae, los puts **amortiguan la mitad de la pérdida**. Cuando
+        sube, el costo del seguro apenas recorta el 10 % de la ganancia.
+
+        Es exactamente la lógica del seguro de automóvil: pagas la prima todos los
+        años esperando **no** usarla. Perder los $\$50{,}000$ no es un fracaso de la
+        estrategia — significa que el escenario que temías no ocurrió.
+
+        Una *protective put* como esta es la forma más directa de gestionar riesgo de
+        mercado con derivados, y reaparece en la Semana 32 junto al VaR. Y ojo con el
+        otro lado de la operación: **vender** puts descubiertos invierte la asimetría
+        —ganancia limitada a la prima, pérdida potencialmente enorme—. Es la
+        estrategia que ha quebrado más fondos en la historia.

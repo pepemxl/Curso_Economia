@@ -5,7 +5,7 @@
 ## 3. Los 4 Pilares del Análisis Financiero
 
 ### A. Ratios de Liquidez (¿Puede pagar sus cuentas mañana?)
-Miden la capacidad de la empresa para cumplir con sus obligaciones a corto plazo (menos de 12 meses) using sus Activos Corrientes.
+Miden la capacidad de la empresa para cumplir con sus obligaciones a corto plazo (menos de 12 meses) usando sus Activos Corrientes.
 1. **Razón Corriente (Current Ratio):** $Activo \text{ Corriente} / Pasivo \text{ Corriente}$. 
    * *Interpretación:* Si es > 1.0, la empresa tiene más activos de corto plazo que deudas de corto plazo. Si es < 1.0, hay riesgo de crisis de liquidez (quiebra técnica).
 2. **Prueba Ácida (Quick Ratio):** $(Activo \text{ Corriente} - Inventario) / Pasivo \text{ Corriente}$.

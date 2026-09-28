@@ -25,3 +25,8 @@ El dinero prestado por el banco no cuesta lo mismo que el dinero de los accionis
 * **Fórmula Costo de Deuda Después de Impuestos:** 
   $$ r_d \times (1 - T) $$
   *(Donde $T$ es la tasa de impuesto a las ganancias corporativas. Si la deuda cuesta 10% y el impuesto es 25%, el costo real de la deuda para la empresa es $10\% \times (1 - 0.25) = 7.5\%$. El gobierno "paga" el 2.5% restante).*
+
+<figure markdown="span">
+  ![La SML fija el rendimiento exigido a cada nivel de riesgo sistemático; los activos fuera de la recta están mal valorados](../../images/capm_sml.png)
+  <figcaption>La SML fija el rendimiento exigido a cada nivel de riesgo sistemático; los activos fuera de la recta están mal valorados</figcaption>
+</figure>
