@@ -76,7 +76,7 @@ A veces, el gobierno interviene. Esto es extremo, pero ejemplifica la diferencia
     1.  **Movimiento a lo largo de la curva de demanda:** Como los alquileres están a $600, más personas quieren independizarse y alquilar. La cantidad demandada aumenta a 15,000.
     2.  **Movimiento a lo largo de la curva de oferta:** Como los dueños ganan menos (solo $600), muchos deciden convertir sus departamentos en Airbnbs, venderlos, o no darles mantenimiento. La cantidad ofrecida cae a 6,000.
 *   **Desequilibrio:** Hay una escasez de 9,000 departamentos (15,000 demandados vs 6,000 ofrecidos).
-*   **Resumen:** En este caso, el factor externo (precio regulado) sólo provocó *movimientos* sobre las curvas de oferta y demanda, sin *desplazar* ninguna. El mercado original se quedó exactamente donde estaba, solo cambiaron las cantidades por dictate legal.
+*   **Resumen:** En este caso, el factor externo (precio regulado) sólo provocó *movimientos* sobre las curvas de oferta y demanda, sin *desplazar* ninguna. El mercado original se quedó exactamente donde estaba, solo cambiaron las cantidades por dictado legal.
 
 <figure markdown="span">
 

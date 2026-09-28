@@ -31,4 +31,37 @@ Contesta y justifica:
 1. Calcula la Elasticidad Ingreso y determina qué tipo de bien son los auriculares inalámbricos según el ingreso.
 2. Calcula la Elasticidad Cruzada y explica la relación (sustitutos o complementarios) entre los auriculares con cable y los inalámbricos.
 
+??? success "Solución del Ejercicio C"
+
+    **1. Elasticidad Ingreso ($E_i$)**
+
+    $$E_i = \frac{\%\Delta Q_d}{\%\Delta \text{Ingreso}} = \frac{+15\%}{+10\%} = +1.5$$
+
+    Interpretación en dos niveles:
+
+    * **$E_i > 0$** → son un **bien normal**: cuando el consumidor gana más, compra más.
+    * **$E_i > 1$** → además son un **bien de lujo (superior)**: la demanda crece
+      *más que proporcionalmente* que el ingreso. Por cada 1 % que sube el ingreso,
+      las ventas suben 1.5 %.
+
+    **Lectura financiera:** un bien con $E_i = 1.5$ es **cíclico**. En una
+    expansión sus ventas se disparan, pero en una recesión caen más rápido que la
+    economía. Al proyectar ingresos para esta empresa hay que ligar el crecimiento
+    de ventas al ciclo del PIB, no usar una tasa plana.
+
+    **2. Elasticidad Cruzada ($E_c$)**
+
+    Bien X = auriculares inalámbricos; Bien Y = auriculares con cable.
+
+    $$E_c = \frac{\%\Delta Q_x}{\%\Delta P_y} = \frac{-4\%}{-8\%} = +0.5$$
+
+    **$E_c > 0$ → son bienes sustitutos.** El signo es lo que importa, y aquí sale
+    positivo porque *ambas* variaciones son negativas: bajó el precio del cable y
+    bajó la demanda del inalámbrico. Es justo el comportamiento de un sustituto —
+    cuando uno se abarata, el otro pierde clientes.
+
+    La magnitud ($0.5$, menor que 1) dice que la sustitución es **débil**: los
+    consumidores no consideran ambos productos totalmente intercambiables,
+    probablemente porque valoran la ausencia de cable como un atributo propio.
+
 ---

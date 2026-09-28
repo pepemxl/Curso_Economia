@@ -36,5 +36,9 @@ Representa la cantidad total de bienes y servicios que las empresas de un país 
   * *Choque adverso (OACP se desplaza a la izquierda):* Sube el precio del petróleo, terremotos, pandemia (cierra fábricas). A corto plazo: **Sube el precio (Inflación) y baja el PIB (Recesión)**. A esto se le llama **Estanflación**.
   * *Choque favorable (OACP se desplaza a la derecha):* Avance tecnológico, buena cosecha agrícola. Baja el precio y sube el PIB.
 
----
+<figure markdown="span">
+  ![Un aumento del gasto público desplaza la DA y cierra la brecha recesiva hasta el PIB potencial](../../images/da_oa_brecha_recesiva.png)
+  <figcaption>Un aumento del gasto público desplaza la DA y cierra la brecha recesiva hasta el PIB potencial</figcaption>
+</figure>
 
+---

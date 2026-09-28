@@ -6,6 +6,27 @@
 * Conocer las 5 cuentas contables principales (Activo, Pasivo, Patrimonio, Ingresos, Gastos).
 * Entender los pasos del Ciclo Contable, desde que ocurre una transacción hasta el Balance General.
 
+```mermaid
+flowchart LR
+    A["1 · Transacción<br/>económica"] --> B["2 · Libro Diario<br/>(asiento por partida doble)"]
+    B --> C["3 · Libro Mayor<br/>(saldo por cuenta)"]
+    C --> D["4 · Balance de<br/>Comprobación"]
+    D --> E["5 · Asientos de ajuste<br/>(devengo, depreciación)"]
+    E --> F["6 · Balance ajustado"]
+    F --> G["7 · Estados Financieros"]
+    G --> H["8 · Asientos de cierre"]
+    H --> A
+
+    G --> G1["Estado de Resultados"]
+    G --> G2["Balance General"]
+    G --> G3["Flujo de Efectivo"]
+
+    style A fill:#1f77b4,color:#fff
+    style G fill:#2ca02c,color:#fff
+    style H fill:#ff7f0e,color:#fff
+```
+
+
 ---
 
 

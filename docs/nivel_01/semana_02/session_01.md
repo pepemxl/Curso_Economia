@@ -20,6 +20,12 @@ El consumidor no puede comprar todo. Su límite es su ingreso ($I$) y los precio
 **B. Curvas de Indiferencia:**
 Son gráficas que muestran combinaciones de dos bienes que le otorgan al consumidor *exactamente la misma utilidad*. El consumidor es indiferente entre cualquier punto de esa curva. Tienen pendiente negativa (para mantener la misma utilidad, si consumes más de un bien, debes consumir menos del otro) y son convexas hacia el origen.
 
+<figure markdown="span">
+  ![El óptimo del consumidor: la curva de indiferencia más alta alcanzable es tangente a la recta de presupuesto](../../images/curvas_indiferencia.png)
+  <figcaption>El óptimo del consumidor: la curva de indiferencia más alta alcanzable es tangente a la recta de presupuesto</figcaption>
+</figure>
+
+
 **C. La Utilidad Marginal Decreciente:**
 La *Utilidad Total* es la satisfacción acumulada. La *Utilidad Marginal (UMg)* es la satisfacción adicional que obtenemos al consumir **una unidad más** de un bien.
 * **La Ley:** A medida que consumes más unidades de un mismo bien, la satisfacción que te aporta cada unidad adicional es menor. 

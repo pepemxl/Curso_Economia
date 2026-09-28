@@ -35,4 +35,67 @@ Eres el contador de la panadería "Sweet Crumb". En el primer mes de operaciones
 3. Compran harina y azúcar (inventario) por $\$2,000$ en efectivo.
 4. Pagan $\$1,000$ de la deuda que tenían pendiente con los hornos, usando efectivo.
 
+??? success "Solución del Ejercicio C"
+
+    **1. Libro Diario de "Sweet Crumb"**
+
+    *Asiento 1 — Aporte de los dueños*
+
+    | Cuenta | Débito | Crédito |
+    |---|---|---|
+    | Efectivo (Activo) | 20,000 | |
+    | Capital Social (Patrimonio) | | 20,000 |
+
+    *Asiento 2 — Compra de hornos ($8,000: $3,000 al contado, $5,000 a crédito)*
+
+    | Cuenta | Débito | Crédito |
+    |---|---|---|
+    | Maquinaria y Equipo (Activo) | 8,000 | |
+    | Efectivo (Activo) | | 3,000 |
+    | Cuentas por Pagar (Pasivo) | | 5,000 |
+
+    *Asiento 3 — Compra de inventario al contado*
+
+    | Cuenta | Débito | Crédito |
+    |---|---|---|
+    | Inventario (Activo) | 2,000 | |
+    | Efectivo (Activo) | | 2,000 |
+
+    *Asiento 4 — Pago parcial de la deuda*
+
+    | Cuenta | Débito | Crédito |
+    |---|---|---|
+    | Cuentas por Pagar (Pasivo) | 1,000 | |
+    | Efectivo (Activo) | | 1,000 |
+
+    En los cuatro asientos, **Débitos = Créditos**. ✓
+
+    **2. Comprobación de la Ecuación Contable**
+
+    Saldo final del Efectivo: $20{,}000 - 3{,}000 - 2{,}000 - 1{,}000 = 14{,}000$
+
+    | | Cuenta | Saldo |
+    |---|---|---|
+    | **ACTIVO** | Efectivo | 14,000 |
+    | | Inventario | 2,000 |
+    | | Maquinaria y Equipo | 8,000 |
+    | | **Total Activo** | **24,000** |
+    | **PASIVO** | Cuentas por Pagar ($5{,}000 - 1{,}000$) | 4,000 |
+    | | **Total Pasivo** | **4,000** |
+    | **PATRIMONIO** | Capital Social | 20,000 |
+    | | **Total Patrimonio** | **20,000** |
+
+    $$A = P + E \Longrightarrow 24{,}000 = 4{,}000 + 20{,}000 \quad ✓$$
+
+    !!! tip "Lo que hay que notar"
+        **Ninguna de las 4 transacciones tocó el Estado de Resultados.** No hubo
+        ventas ni gastos: solo se movieron activos, pasivos y capital. Es el error
+        clásico del principiante — pensar que "pagar" es un gasto. Comprar un horno
+        de $\$8{,}000$ no es un gasto de $\$8{,}000$; es cambiar efectivo por otro
+        activo. El gasto llegará poco a poco, vía **depreciación** (Semana 8).
+
+        Fíjate también en el asiento 4: pagar deuda **reduce activo y pasivo por
+        igual** ($-1{,}000$ y $-1{,}000$), así que la ecuación sigue cuadrando y el
+        patrimonio no se mueve.
+
 ---

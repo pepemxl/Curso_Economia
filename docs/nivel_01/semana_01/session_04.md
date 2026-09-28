@@ -29,4 +29,44 @@ El mercado de las bicicletas eléctricas tiene las siguientes funciones:
 2. Si el precio actual de mercado se fija en $40, ¿existe escasez o excedente? ¿Cuántas unidades? Explica qué ocurrirá en el mercado con los precios a corto plazo.
 3. Imagina que el precio de la gasolina (sustituto del transporte eléctrico) sube drásticamente. ¿Desplazará esto la curva de demanda de bicicletas hacia la derecha o hacia la izquierda?
 
+??? success "Solución del Ejercicio C"
+
+    **1. Precio y cantidad de equilibrio**
+
+    Igualamos $Q_d = Q_s$:
+
+    $$200 - 2P = -40 + 4P$$
+    
+    $$200 + 40 = 4P + 2P \Longrightarrow 240 = 6P$$
+
+    $$P^* = 40 \qquad Q^* = 200 - 2(40) = 120$$
+
+    Comprobación con la oferta: $Q_s = -40 + 4(40) = 120$. ✓
+
+    **2. ¿Escasez o excedente a $P = 40$?**
+
+    **Ninguna de las dos: $\$40$ *es* el precio de equilibrio.**
+
+    $$Q_d = 200 - 2(40) = 120 \qquad Q_s = -40 + 4(40) = 120$$
+
+    Como $Q_d = Q_s$, el mercado está exactamente equilibrado (0 unidades de
+    desajuste) y no hay ninguna presión sobre el precio a corto plazo.
+
+    Para ver el mecanismo, conviene probar un precio que *sí* desequilibre. A $P = 50$:
+    $Q_d = 100$ y $Q_s = 160$ → **excedente de 60 unidades**; los vendedores
+    acumularían inventario y bajarían el precio hacia $\$40$. A $P = 30$:
+    $Q_d = 140$ y $Q_s = 80$ → **escasez de 60 unidades**; los compradores
+    competirían entre sí y el precio subiría hacia $\$40$.
+
+    **3. Sube el precio de la gasolina**
+
+    La gasolina es un **sustituto** del transporte eléctrico. Si se encarece
+    moverse en un vehículo de combustión, los consumidores buscan alternativas y
+    la curva de demanda de bicicletas eléctricas **se desplaza hacia la derecha**.
+
+    Ojo con la distinción de la Sesión 2: esto es un *desplazamiento* de la
+    demanda (cambió un determinante distinto del precio del propio bien), no un
+    movimiento a lo largo de la curva. El nuevo equilibrio tendrá **mayor precio
+    y mayor cantidad**.
+
 ---

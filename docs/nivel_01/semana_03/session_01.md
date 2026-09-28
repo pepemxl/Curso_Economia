@@ -40,5 +40,9 @@ Agregando unidades adicionales de un insumo variable (trabajadores) a un insumo 
 
 **Regla de Oro de la Producción:** El Costo Marginal (CMg) siempre cruza al Costo Total Medio (CTMe) exactamente en su **punto mínimo**. Si el costo de producir el siguiente unit es menor que el promedio, el promedio baja. Si es mayor, el promedio sube.
 
----
+<figure markdown="span">
+  ![El CMg corta al CTMe y al CVMe exactamente en sus mínimos; el óptimo se da donde $P = CMg$](../../images/costos_produccion.png)
+  <figcaption>El CMg corta al CTMe y al CVMe exactamente en sus mínimos; el óptimo se da donde $P = CMg$</figcaption>
+</figure>
 
+---

@@ -21,3 +21,95 @@ Las cuentas en el Balance General se ordenan por su **liquidez** (qué tan rápi
 
 ---
 
+## Las líneas del Estado de Resultados y qué mide cada una
+
+No todas las utilidades responden la misma pregunta. Bajar por el P&L es ir despejando capas:
+
+| Nivel | Qué se resta | Qué mide realmente |
+|---|---|---|
+| **Utilidad bruta** | Costo de ventas | Eficiencia del producto y poder de fijación de precios |
+| **EBITDA** | Gastos operativos (sin D&A) | Generación de caja operativa aproximada |
+| **EBIT / Utilidad operativa** | Depreciación y amortización | Rentabilidad del negocio **sin** decisiones de financiamiento |
+| **EBT** | Intereses | Efecto de la estructura de capital |
+| **Utilidad neta** | Impuestos | Lo que queda para los accionistas |
+
+**Por qué el EBIT es la línea favorita del analista.** Es la última que **no depende de cómo se
+financió la empresa**. Dos compañías idénticas operativamente, una con deuda y otra sin ella,
+tienen el mismo EBIT pero utilidades netas muy distintas. Para comparar la calidad de dos
+negocios, se compara arriba; para evaluar el riesgo financiero, se mira abajo.
+
+!!! warning "El EBITDA no es flujo de caja"
+    Es la simplificación más peligrosa de las finanzas. El EBITDA ignora tres cosas que
+    consumen efectivo real: **impuestos**, **inversión en capital de trabajo** y sobre todo
+    **CapEx**.
+
+    Sumar de vuelta la depreciación equivale a fingir que los activos no se desgastan. En una
+    empresa intensiva en capital —una minera, una telco, una aerolínea— el CapEx de
+    mantenimiento es enorme y perpetuo. Charlie Munger lo resumía preguntando si alguien cree
+    de verdad que la depreciación no es un gasto.
+
+    Por eso la Semana 22 construye el **FCFF**, que sí resta CapEx y capital de trabajo, y por
+    eso el DCF descuenta flujos, no EBITDA.
+
+---
+
+## Los gastos operativos: dónde mirar las señales
+
+Bajo el epígrafe de gastos operativos se agrupan partidas que cuentan historias muy distintas:
+
+* **Gastos de venta y marketing.** En una empresa en crecimiento son inversión disfrazada de
+  gasto; el ratio clave es cuánto cuesta adquirir un cliente frente a lo que ese cliente
+  aportará en toda su vida.
+* **Gastos de administración (G&A).** Deberían crecer **más despacio** que las ventas: si no,
+  no hay apalancamiento operativo y la escala no está funcionando.
+* **Investigación y desarrollo.** Bajo NIIF parte puede **capitalizarse** (pasar al balance como
+  activo) en lugar de gastarse. Capitalizar infla la utilidad de hoy a costa de amortizaciones
+  futuras — comparar el criterio con el de los competidores es obligatorio.
+* **Deterioros y partidas no recurrentes.** Se presentan como "extraordinarias", pero cuando una
+  empresa tiene cargos extraordinarios **todos los años**, ya no son extraordinarios: son parte
+  del negocio.
+
+**El apalancamiento operativo.** Cuanto mayor sea la proporción de costos **fijos** en la
+estructura, más amplifica la empresa los cambios en ventas:
+
+$$\text{Apalancamiento operativo} = \frac{\%\Delta EBIT}{\%\Delta \text{Ventas}}$$
+
+Un software con costos casi todos fijos tiene apalancamiento altísimo: cada venta adicional cae
+casi entera al EBIT. Una distribuidora con costos casi todos variables, muy bajo. El primero es
+espectacular en expansión y letal en recesión.
+
+---
+
+## Cómo se conectan los tres estados financieros
+
+Esta es la idea que hay que llevarse de la semana, porque es el esqueleto de todo modelo
+financiero (y del que construirás en la Semana 18):
+
+```mermaid
+flowchart LR
+    PL["ESTADO DE RESULTADOS<br/>Ventas → EBIT → Utilidad Neta"]
+    CF["FLUJO DE EFECTIVO<br/>CFO + CFI + CFF"]
+    BG["BALANCE GENERAL<br/>Activo = Pasivo + Patrimonio"]
+
+    PL -->|"Utilidad neta<br/>(punto de partida)"| CF
+    PL -->|"Utilidad neta − dividendos<br/>→ Ganancias retenidas"| BG
+    CF -->|"Efectivo final<br/>(el 'plug')"| BG
+    BG -->|"Deuda × tasa<br/>→ gasto financiero"| PL
+    BG -->|"PP&E → depreciación"| PL
+
+    style PL fill:#1f77b4,color:#fff
+    style CF fill:#ff7f0e,color:#fff
+    style BG fill:#2ca02c,color:#fff
+```
+
+Los tres enlaces que **siempre** hay que verificar:
+
+1. La **utilidad neta** encabeza el flujo de efectivo y alimenta las ganancias retenidas.
+2. El **efectivo final** del flujo es el saldo de caja del balance.
+3. El **PP&E** del balance genera la depreciación que aparece en el P&L y se suma de vuelta en
+   el flujo.
+
+Si esos tres enlaces están bien montados, el balance cuadra solo. Si no cuadra, uno de ellos
+está roto — nunca es un problema de "redondeo".
+
+---

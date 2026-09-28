@@ -15,7 +15,7 @@ La empresa "AlphaTech" tiene las siguientes cuentas al cierre del año (en miles
 * Cuentas por Cobrar: $100
 * Inventario: $80
 * Capital Social: $100
-* Ganancias Retenidas (Año anterior): $50
+* Ganancias Retenidas (Año anterior): $139
 
 **A. Construcción del Estado de Resultados:**
 1. Ventas: $1,000
@@ -31,14 +31,126 @@ La empresa "AlphaTech" tiene las siguientes cuentas al cierre del año (en miles
 *(Supongamos que AlphaTech decide no pagar dividendos este año).*
 
 **B. Construcción del Balance General:**
-Primero actualizamos las Ganancias Retenidas: $50 (Año anterior) + $161 (Utilidad Neta de este año) - $0 (Dividendos) = **$211**.
+Primero actualizamos las Ganancias Retenidas: $139 (Año anterior) + $161 (Utilidad Neta de este año) - $0 (Dividendos) = **$300**.
 
-* **Activos:** Efectivo ($50) + Cuentas por Cobrar ($100) + Inventario ($80) + Edificios ($400) = **Total Activos: $630**
-* **Pasivos:** Cuentas por Pagar ($30) + DeudaLP ($200) = **Total Pasivos: $230**
-* **Patrimonio:** Capital Social ($100) + Ganancias Retenidas ($211) = **Total Patrimonio: $311**
-* **Comprobación:** $A (630) = P (230) + E (311)$. ¡La ecuación cuadra perfectamente ($630 = $541$... espera, un error intencional para que veas la importancia del balance!) 
+| | Cuenta | Monto |
+|---|---|---|
+| **ACTIVO** | Efectivo | 50 |
+| | Cuentas por Cobrar | 100 |
+| | Inventario | 80 |
+| | Edificios y Equipos | 400 |
+| | **Total Activo** | **630** |
+| **PASIVO** | Cuentas por Pagar | 30 |
+| | Deuda a Largo Plazo | 200 |
+| | **Total Pasivo** | **230** |
+| **PATRIMONIO** | Capital Social | 100 |
+| | Ganancias Retenidas ($139 + $161) | 300 |
+| | **Total Patrimonio** | **400** |
 
-*Revisando los cálculos:* Activos deben ser 630. Pasivos son 230. Para que cuadre, el Patrimonio debe ser 400. Ganancias Retenidas (211) + Capital (100) = 311. Faltan 89. ¡Ah! Se me olvidó añadir el Efectivo extra generado, pero matemáticamente si se incluyeron todas las cuentas dadas, el asiento cuadraría si reducimos algún activo o ajustamos patrimonio. *Nota del instructor: En el mundo real, la Balanza de Comprobación te dice el saldo exacto de cada cuenta para que no falten números.*
+**Comprobación de la ecuación contable:**
+
+$$A = P + E \Longrightarrow 630 = 230 + 400 \quad ✓$$
+
+!!! tip "Qué hacer cuando el balance NO cuadra"
+    Esta es la situación más común al construir estados financieros a mano, y hay un
+    procedimiento para diagnosticarla en lugar de forzar el número:
+
+    1. **Calcula la diferencia y divídela entre 2.** Si el resultado coincide con alguna cuenta,
+       probablemente la registraste en el lado equivocado (un débito donde iba un crédito).
+    2. **¿La diferencia es divisible entre 9?** Casi siempre es una **transposición de dígitos**
+       (escribir 91 en lugar de 19).
+    3. **¿La diferencia coincide exactamente con una cuenta?** La omitiste por completo.
+    4. **Revisa el puente P&L → Balance.** El error más frecuente es olvidar llevar la utilidad
+       neta a las Ganancias Retenidas, o restar dividendos que no correspondían.
+    5. **Comprueba la balanza antes de los estados.** Si la suma de débitos no iguala a la de
+       créditos en la balanza de comprobación, el error está en el registro, no en la
+       presentación.
+
+    **Lo que nunca debes hacer es "cuadrarlo" metiendo una cifra de ajuste.** Un balance que no
+    cierra es la contabilidad avisándote de un error real; taparlo lo convierte en un error
+    invisible. Es exactamente la misma disciplina que exige la fila de comprobación del modelo
+    de Excel de la Semana 18.
 
 ---
 
+## Segundo ejercicio: el mismo negocio con y sin deuda
+
+AlphaTech tiene una hermana gemela, **BetaTech**: idéntica en todo lo operativo, pero
+financiada de forma distinta. Compara ambas para aislar el efecto de la estructura de capital.
+
+| | AlphaTech | BetaTech |
+|---|---|---|
+| Ventas | 1,000 | 1,000 |
+| Costo de ventas | 600 | 600 |
+| Gastos administrativos | 150 | 150 |
+| **EBIT** | **250** | **250** |
+| Deuda | 200 | 500 |
+| Gasto financiero (10 %) | 20 | 50 |
+| Patrimonio | 400 | 100 |
+
+**Estado de Resultados comparado:**
+
+| Concepto | AlphaTech | BetaTech |
+|---|---|---|
+| EBIT | 250 | 250 |
+| (−) Intereses | (20) | (50) |
+| EBT | 230 | 200 |
+| (−) Impuestos (30 %) | (69) | (60) |
+| **Utilidad neta** | **161** | **140** |
+
+**Ratios de rentabilidad:**
+
+$$ROA_{Alpha} = \frac{161}{630} = 25.6\% \qquad ROA_{Beta} = \frac{161}{630} \text{ (operativo idéntico)}$$
+
+$$ROE_{Alpha} = \frac{161}{400} = \mathbf{40.3\%} \qquad ROE_{Beta} = \frac{140}{100} = \mathbf{140\%}$$
+
+**BetaTech gana menos dinero y sin embargo su ROE es tres veces y media mayor.**
+
+No es magia: el apalancamiento reparte el mismo beneficio operativo entre una base de capital
+mucho más pequeña. Es exactamente el tercer componente del **Dupont** que descompondrás en la
+Semana 22.
+
+**El otro lado de la moneda — cobertura de intereses:**
+
+$$\text{Alpha} = \frac{250}{20} = 12.5\times \qquad \text{Beta} = \frac{250}{50} = 5.0\times$$
+
+Y si el EBIT cayera un 60 % en una recesión (a 100):
+
+| | AlphaTech | BetaTech |
+|---|---|---|
+| EBIT | 100 | 100 |
+| (−) Intereses | (20) | (50) |
+| EBT | **80** | **50** |
+| Utilidad neta | 56 | 35 |
+| Cobertura | 5.0× | **2.0×** |
+
+Alpha sigue holgada; Beta queda al límite del *covenant* típico. Una caída algo mayor la pondría
+en incumplimiento técnico.
+
+**La lección:** el apalancamiento **amplifica en ambas direcciones**. Un ROE alto no es
+necesariamente señal de un buen negocio; puede ser señal de un balance frágil. Por eso jamás se
+mira el ROE sin mirar a la vez la cobertura de intereses y el ratio de endeudamiento.
+
+**El escudo fiscal, de paso:** BetaTech pagó $\$9$ menos de impuestos ($60$ frente a $69$).
+Ese ahorro es real y es exactamente el $D \times T$ de Modigliani-Miller que verás en la
+Semana 26: $\$30$ de intereses adicionales $\times 30\% = \$9$.
+
+---
+
+## Errores frecuentes al construir estados financieros
+
+1. **Meter los dividendos en el Estado de Resultados.** No son un gasto: son una distribución
+   de utilidad ya ganada. Van directos contra las Ganancias Retenidas.
+2. **Confundir depreciación acumulada con gasto de depreciación.** El **gasto** es del período y
+   va al P&L; la **acumulada** es el saldo histórico y vive en el balance como contra-activo.
+3. **Restar los intereses antes de calcular el EBIT.** El orden es sagrado: EBIT primero,
+   intereses después, impuestos al final. Invertirlo destruye la comparabilidad entre empresas.
+4. **Olvidar la parte corriente de la deuda de largo plazo.** La porción que vence en los
+   próximos 12 meses se reclasifica a pasivo corriente. Ignorarlo infla artificialmente la razón
+   corriente (Semana 21).
+5. **Aplicar la tasa impositiva sobre el EBIT en lugar del EBT.** Los intereses son deducibles;
+   la base gravable es después de intereses.
+6. **Sumar el inventario como si fuera efectivo.** Es activo corriente, sí, pero es justo el que
+   la prueba ácida excluye por buenas razones.
+
+---

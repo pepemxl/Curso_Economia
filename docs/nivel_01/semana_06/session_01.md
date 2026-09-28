@@ -28,6 +28,31 @@ El Banco Central (ej. Reserva Federal en EE. UU., Banco Central Europeo, Banco d
 1. El Banco Central sube la tasa de referencia.
 2. Los bancos comerciales suben las tasas de sus préstamos (hipotecas, autos, tarjetas de crédito) y de sus depósitos.
 3. Las empresas y familias dejan de pedir préstamos (el costo es alto) y ahorran más (el rendimiento es alto).
+
+```mermaid
+flowchart TD
+    A["Banco Central<br/>sube la tasa de referencia"] --> B["Bancos comerciales encarecen<br/>hipotecas, autos y tarjetas"]
+    B --> C["Familias: menos consumo<br/>más ahorro"]
+    B --> D["Empresas: proyectos con VAN<br/>que ya no compensa el costo"]
+    C --> E["Cae la Demanda Agregada"]
+    D --> E
+    D --> F["Menos inversión y CapEx"]
+    F --> E
+    E --> G["Se enfría la economía<br/>y baja la inflación"]
+    E --> H["Sube el desempleo<br/>(costo de la medida)"]
+    A --> I["Sube el rendimiento de los bonos<br/>→ cae su precio"]
+    I --> J["Sube el WACC de las empresas<br/>→ caen las valuaciones"]
+
+    style A fill:#1f77b4,color:#fff
+    style G fill:#2ca02c,color:#fff
+    style H fill:#d62728,color:#fff
+    style J fill:#d62728,color:#fff
+```
+
+*El mecanismo de transmisión monetaria no es instantáneo: entre la decisión del Banco Central
+y su efecto pleno sobre la inflación suelen pasar de 12 a 18 meses. Por eso los bancos centrales
+deben actuar sobre la inflación **esperada**, no sobre la observada.*
+
 4. El Consumo (C) y la Inversión (I) caen.
 5. La Demanda Agregada cae, el PIB se desacelera y la inflación baja.
 

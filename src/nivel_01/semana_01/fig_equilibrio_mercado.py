@@ -1,5 +1,21 @@
+import os
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
+
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
+
+from estilo_figuras import DIR_IMAGENES
+
+
+def _destino(nombre):
+    """Las figuras se guardan siempre en docs/images/, no en el cwd."""
+    if not os.path.isdir(DIR_IMAGENES):
+        os.makedirs(DIR_IMAGENES)
+    return os.path.join(DIR_IMAGENES, nombre)
+
 
 
 # Colores a utilizar
@@ -170,8 +186,9 @@ def ejemplos_dezplazamiento_movimientos():
     # GUARDAR EN ARCHIVO EN LUGAR DE MOSTRAR EN PANTALLA
     # =====================================================================
     nombre_archivo = 'equilibrio_mercado.png'
-    plt.savefig(nombre_archivo, dpi=300, bbox_inches='tight')
-    print(f"Gráfica guardada exitosamente como: {nombre_archivo}")
+    plt.savefig(_destino(nombre_archivo), dpi=300, bbox_inches='tight')
+    print("  -> docs/images/%s" % nombre_archivo)
+    plt.close()
 
 
 def save_fig_ejemplo_audifonos_dezplazamiento_movimientos(nombre_archivo = 'equilibrio_mercado_audifonos.png'):
@@ -183,8 +200,9 @@ def save_fig_ejemplo_audifonos_dezplazamiento_movimientos(nombre_archivo = 'equi
 
     # Ajustar espaciado entre gráficas
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-    plt.savefig(nombre_archivo, dpi=300, bbox_inches='tight')
-    print(f"Gráfica guardada exitosamente como: {nombre_archivo}")
+    plt.savefig(_destino(nombre_archivo), dpi=300, bbox_inches='tight')
+    print("  -> docs/images/%s" % nombre_archivo)
+    plt.close()
 
 
 def save_fig_ejemplo_rosas_dezplazamiento_movimientos(nombre_archivo = 'equilibrio_mercado_rosas.png'):
@@ -196,8 +214,9 @@ def save_fig_ejemplo_rosas_dezplazamiento_movimientos(nombre_archivo = 'equilibr
 
     # Ajustar espaciado entre gráficas
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-    plt.savefig(nombre_archivo, dpi=300, bbox_inches='tight')
-    print(f"Gráfica guardada exitosamente como: {nombre_archivo}")
+    plt.savefig(_destino(nombre_archivo), dpi=300, bbox_inches='tight')
+    print("  -> docs/images/%s" % nombre_archivo)
+    plt.close()
 
 
 def save_fig_ejemplo_alquileres_dezplazamiento_movimientos(nombre_archivo = 'equilibrio_mercado_alquileres.png'):
@@ -209,13 +228,13 @@ def save_fig_ejemplo_alquileres_dezplazamiento_movimientos(nombre_archivo = 'equ
 
     # Ajustar espaciado entre gráficas
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-    plt.savefig(nombre_archivo, dpi=300, bbox_inches='tight')
-    print(f"Gráfica guardada exitosamente como: {nombre_archivo}")
+    plt.savefig(_destino(nombre_archivo), dpi=300, bbox_inches='tight')
+    print("  -> docs/images/%s" % nombre_archivo)
+    plt.close()
 
 
-if __name__=='__main__':
-    pass
-    # ejemplos_dezplazamiento_movimientos()
-    # save_fig_ejemplo_audifonos_dezplazamiento_movimientos()
-    # save_fig_ejemplo_rosas_dezplazamiento_movimientos()
-    # save_fig_ejemplo_alquileres_dezplazamiento_movimientos()
+if __name__ == '__main__':
+    ejemplos_dezplazamiento_movimientos()
+    save_fig_ejemplo_audifonos_dezplazamiento_movimientos()
+    save_fig_ejemplo_rosas_dezplazamiento_movimientos()
+    save_fig_ejemplo_alquileres_dezplazamiento_movimientos()

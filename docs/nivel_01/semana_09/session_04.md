@@ -42,4 +42,53 @@ Contesta paso a paso:
 3. ¿Cuál es el Flujo de Efectivo de Financiamiento (CFF)? *(Recuerda que el pago de dividendos es salida, la emisión de bonos es entrada).*
 4. Calcula el Flujo de Caja Libre (FCF) para este año. ¿Cuánto efectivo excedente le quedó a GreenLeaf para reducir deuda o hacer adquisiciones?
 
+??? success "Solución del Ejercicio C"
+
+    **1. Flujo de Efectivo de Operación (CFO) — método indirecto**
+
+    | Concepto | Monto |
+    |---|---|
+    | Utilidad Neta | 500 |
+    | (+) Depreciación y Amortización | 120 |
+    | (+) Disminución en Cuentas por Cobrar | 50 |
+    | (−) Aumento en Inventario | (80) |
+    | (+) Aumento en Cuentas por Pagar | 40 |
+    | **= CFO** | **630** |
+
+    La lógica de los signos: se **suma** la D&A porque es un gasto contable que
+    nunca salió en efectivo. Cobrar cartera pendiente (CxC baja) **entra** efectivo;
+    acumular inventario **inmoviliza** efectivo; y estirar el pago a proveedores
+    (CxP sube) **retiene** efectivo.
+
+    **2. Flujo de Efectivo de Inversión (CFI)**
+
+    $$CFI = -200 \text{ (CapEx: compra de planta física)}$$
+
+    **3. Flujo de Efectivo de Financiamiento (CFF)**
+
+    $$CFF = \underbrace{+150}_{\text{emisión de bonos}} \underbrace{-100}_{\text{dividendos}} = +50$$
+
+    **4. Flujo de Caja Libre (FCF)**
+
+    $$FCF = CFO - CapEx = 630 - 200 = \mathbf{430}$$
+
+    **Interpretación:** a GreenLeaf le quedaron **430 millones** de efectivo
+    genuinamente libre tras operar y mantener su capacidad productiva. Con eso pagó
+    los 100 de dividendos y aún le sobran **330 millones** para amortizar deuda,
+    hacer adquisiciones o recomprar acciones. Es una empresa sana: **genera más caja
+    de la que necesita.**
+
+    **Variación neta del efectivo del año** (para cuadrar con el Balance):
+
+    $$\Delta \text{Efectivo} = CFO + CFI + CFF = 630 - 200 + 50 = +480$$
+
+    !!! tip "Por qué el FCF importa más que la Utilidad Neta"
+        Aquí la utilidad neta es 500 y el CFO es 630: la empresa genera **más caja
+        que utilidad contable**, señal de calidad. Cuando ocurre lo contrario —
+        utilidad alta y CFO bajo o negativo — suele haber ventas a crédito que no
+        se cobran o inventario que no rota. Ese es exactamente el caso que analizas
+        en el ejercicio integrador de la Semana 10.
+
+        El FCF, no la utilidad, es lo que descontarás en el modelo DCF (Semana 37).
+
 ---

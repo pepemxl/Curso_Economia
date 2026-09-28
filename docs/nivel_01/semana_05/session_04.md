@@ -32,4 +32,35 @@ Contesta:
 1. Calcula el multiplicador keynesiano ($k$) en Econolutia. Muestra tus pasos.
 2. ¿Cuánto tiene que aumentar el gasto público ($G$) exactamente para cerrar la brecha recesaria y llevar el PIB exacto a su nivel potencial de pleno empleo? (Pista: Recuerda que el impacto en el PIB será $k \times \Delta G$. Sustituye el valor del impacto deseado y despeja $\Delta G$).
 
+??? success "Solución del Ejercicio C"
+
+    **1. Multiplicador keynesiano**
+
+    $$k = \frac{1}{1 - PMgC} = \frac{1}{1 - 0.60} = \frac{1}{0.40} = \mathbf{2.5}$$
+
+    Significa que cada peso de gasto público adicional genera $\$2.50$ de PIB:
+    el primer peso se gasta, el 60 % de eso vuelve a gastarse, y así sucesivamente.
+
+    **2. Aumento de gasto público necesario**
+
+    Brecha recesiva a cerrar:
+
+    $$\Delta PIB\ \text{deseado} = 5{,}500 - 5{,}000 = 500 \text{ millones}$$
+
+    Como $\Delta PIB = k \times \Delta G$, despejamos:
+
+    $$\Delta G = \frac{\Delta PIB}{k} = \frac{500}{2.5} = \mathbf{200 \text{ millones}}$$
+
+    **Comprobación:** $2.5 \times 200 = 500$ ✓ → el PIB pasa de $5{,}000$ a $5{,}500$.
+
+    La idea potente del multiplicador: el gobierno **no necesita gastar los 500
+    millones de la brecha**, le bastan 200. Los otros 300 los genera el propio
+    circuito de consumo privado.
+
+    !!! note "Matiz que suele preguntarse en examen"
+        Este resultado supone el multiplicador simple (economía cerrada, sin
+        impuestos proporcionales al ingreso ni importaciones). Con impuestos y
+        propensión a importar, el multiplicador real es **menor**, y el gobierno
+        tendría que gastar **más** de 200 millones para cerrar la misma brecha.
+
 ---

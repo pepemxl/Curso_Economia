@@ -37,3 +37,84 @@ $FCF = CFO (240) - CapEx (80) = \mathbf{\$160}$.
 
 ---
 
+## Segundo ejercicio: dos empresas con la misma utilidad y destinos opuestos
+
+Aquí está el ejercicio que enseña de verdad para qué sirve este estado. Dos empresas del mismo
+sector reportan **exactamente la misma utilidad neta de $\$200$**:
+
+| Concepto | **SólidaCorp** | **FrágilCorp** |
+|---|---|---|
+| Utilidad neta | 200 | 200 |
+| (+) Depreciación | 50 | 50 |
+| (−) Aumento en cuentas por cobrar | (20) | **(180)** |
+| (−) Aumento en inventario | (10) | **(120)** |
+| (+) Aumento en cuentas por pagar | 30 | 20 |
+| **CFO** | **250** | **(30)** |
+| (−) CapEx | (80) | (80) |
+| **FCF** | **170** | **(110)** |
+
+**Misma utilidad. Una genera $\$170$ de caja libre; la otra quema $\$110$.**
+
+Un inversionista que solo mirase el Estado de Resultados las consideraría idénticas.
+
+**El diagnóstico de FrágilCorp:** sus cuentas por cobrar crecieron $\$180$ sobre una utilidad de
+$\$200$. Está **vendiendo pero no cobrando**. Y su inventario subió $\$120$: produce más de lo
+que vende. Las dos cosas a la vez apuntan a un mismo lugar: **está forzando ventas a crédito a
+clientes de mala calidad para sostener el crecimiento reportado.**
+
+**Cómo termina esta historia:** llega un momento en que la cartera vieja hay que provisionarla
+como incobrable, y el inventario obsoleto hay que castigarlo. Ambas cosas golpean el P&L de
+golpe, y ese trimestre la utilidad se desploma. El flujo de efectivo lo había anticipado con
+varios trimestres de antelación.
+
+---
+
+## Tercer ejercicio: los ratios de calidad del beneficio
+
+Sobre los mismos datos, calcula los tres indicadores que un analista revisa en este orden:
+
+**1. Ratio de calidad del beneficio (*earnings quality*)**
+
+$$\text{Calidad} = \frac{CFO}{\text{Utilidad neta}}$$
+
+$$\text{Sólida} = \frac{250}{200} = \mathbf{1.25} \qquad \text{Frágil} = \frac{-30}{200} = \mathbf{-0.15}$$
+
+**Interpretación:** por encima de 1 la empresa convierte cada peso de utilidad contable en más
+de un peso de caja. Por debajo de 0,8 de forma sostenida, hay que investigar. Negativo es una
+bandera roja inmediata.
+
+**2. Conversión de efectivo (*cash conversion*)**
+
+$$\frac{FCF}{\text{Utilidad neta}}: \quad \text{Sólida} = 0.85 \qquad \text{Frágil} = -0.55$$
+
+**3. CapEx sobre depreciación**
+
+$$\frac{80}{50} = 1.6\times \text{ en ambas}$$
+
+Este ratio dice si la empresa está **manteniendo o expandiendo** su capacidad:
+
+| Ratio | Lectura |
+|---|---|
+| $< 1$ | Invierte menos de lo que se desgasta: **se está descapitalizando** |
+| $\approx 1$ | Solo mantenimiento; sin crecimiento orgánico |
+| $> 1$ | Expansión de capacidad |
+
+Cuidado con el caso $<1$ sostenido: mejora el FCF a corto plazo y por tanto el DCF, pero la
+empresa se está comiendo su propia capacidad productiva. Es una forma sutil de maquillar la
+generación de caja.
+
+!!! danger "El orden en que un analista lee los estados financieros"
+    Contra toda intuición, **no** se empieza por el Estado de Resultados:
+
+    1. **Flujo de efectivo primero.** Es el más difícil de manipular: el efectivo o está en el
+       banco o no está.
+    2. **Balance segundo.** ¿Qué cuentas crecen más rápido que las ventas? Ahí se esconden los
+       problemas.
+    3. **Estado de Resultados al final.** Ya sabiendo qué buscar, se contrasta si la utilidad
+       reportada es consistente con lo anterior.
+    4. **Notas a los estados financieros.** Donde de verdad está la información: criterios
+       contables, contingencias, vencimientos de deuda, partes relacionadas.
+
+    La utilidad es una **opinión**; el efectivo es un **hecho**. Empieza siempre por los hechos.
+
+---

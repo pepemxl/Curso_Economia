@@ -34,4 +34,38 @@ Contesta:
 1. ¿Cuál es el multiplicador de los impuestos en este país? (Pista: El multiplicador de los impuestos es igual al multiplicador del gasto, pero negativo y ligeramente menor: $k_{imp} = - \frac{PMgC}{1 - PMgC}$). Calcula su valor.
 2. ¿Cuánto debe subir los impuestos ($\Delta T$) el gobierno exactamente para cerrar esa brecha inflacionaria y enfriar el PIB de $\$2,400$ hasta el nivel potencial de $\$2,000$? (Recuerda: la reducción del PIB será $k_{imp} \times \Delta T$. Despeja $\Delta T$).
 
+??? success "Solución del Ejercicio C"
+
+    **1. Multiplicador de los impuestos**
+
+    $$k_{imp} = -\frac{PMgC}{1 - PMgC} = -\frac{0.8}{1 - 0.8} = -\frac{0.8}{0.2} = \mathbf{-4}$$
+
+    Cada peso de impuesto adicional **reduce** el PIB en 4 pesos.
+
+    **2. Subida de impuestos necesaria**
+
+    La brecha inflacionaria a cerrar es de $-400$ millones (hay que enfriar el PIB
+    de $2{,}400$ a $2{,}000$):
+
+    $$\Delta PIB = k_{imp} \times \Delta T$$
+    
+    $$-400 = -4 \times \Delta T \Longrightarrow \Delta T = \mathbf{100 \text{ millones}}$$
+
+    **Comprobación:** $-4 \times 100 = -400$ ✓
+
+    **¿Por qué el multiplicador fiscal es menor en valor absoluto que el del gasto?**
+
+    Con la misma $PMgC = 0.8$, el multiplicador del **gasto** sería
+    $k_G = 1/(1-0.8) = 5$, frente a $|k_{imp}| = 4$.
+
+    La razón es que el gasto público entra **completo** al flujo circular: el
+    gobierno gasta los 100 millones y los 100 se convierten en ingreso de alguien.
+    En cambio, un impuesto de 100 no reduce el consumo en 100, sino solo en
+    $0.8 \times 100 = 80$: el contribuyente absorbe los otros 20 reduciendo su
+    **ahorro**, no su consumo. El impuesto actúa con un paso de retraso.
+
+    **Implicación de política:** para enfriar la economía, **subir impuestos es
+    menos potente que recortar gasto**. Para cerrar los mismos 400 millones bastaría
+    con recortar $400/5 = 80$ millones de gasto, frente a los 100 de impuestos.
+
 ---
